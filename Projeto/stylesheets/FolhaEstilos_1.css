@@ -1,0 +1,106 @@
+/* Definição da paleta de cores primaria da página
+:root {
+    --cor-primaria: #dbb5ff; /* Rosa Claro
+    --cor-texto: #333; /* Cor do texto padrão
+    
+}
+*/
+
+
+
+
+
+
+
+/* Estilização de Todas as Tabelas da página
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--cor-primaria);
+}
+
+th, td {
+    border: 1px solid var(--cor-primaria);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--cor-texto);
+    color: var(--cor-primaria);
+}
+*/
+
+
+
+
+
+
+
+/* Estilização de Formulários
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--cor-texto);
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"] {
+    background-color: var(--cor-texto);
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--cor-texto);
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+*/
+
+
+
+
+
+
+
+
+/* Estilização Geral
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    margin: 0;
+    padding: 0;
+}
+*/
