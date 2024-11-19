@@ -1,4 +1,7 @@
-.bd-placeholder-img {
+  :root {
+    --cor-destaque: #1559B7;
+  }
+  .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
@@ -73,4 +76,19 @@
 
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
+  }
+
+  .navbar-heigth {
+    padding: 0px 70px;
+  }
+  .nav-item {
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .btn-contactos {
+    font-size: 20px;
+    border-radius: 0%;
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
   }
