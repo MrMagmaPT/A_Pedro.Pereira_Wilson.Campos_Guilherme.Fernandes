@@ -174,16 +174,19 @@ body {
     border-width: 2px;
   }
 
+/*Escolha o pais*/
+.escolha-pais {
+  font-weight: bolder;
+  font-size: 56px;
+}
+
 /*SObre nos*/
 
 .sobre-nos {
+  font-weight: bolder;
+  font-size: 56px;
   text-align: center;
   padding: 20px;
-}
-
-.sobre-nos h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
 }
 
 .sobre-nos .cards-container {
