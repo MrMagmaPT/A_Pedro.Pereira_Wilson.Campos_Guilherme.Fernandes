@@ -246,7 +246,8 @@ body {
 
 .hero {
   position: relative;
-  background: url('img\Background img city.png') no-repeat center center/cover;
+  background-image: url('img/Background_img_city.png') no-repeat center center/cover;
+  background-image: url('img/Background_img_city.png');
   height: 100vh; /* Altura de 100% da viewport */
   display: flex;
   justify-content: center;
