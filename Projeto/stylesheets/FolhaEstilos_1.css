@@ -1,6 +1,86 @@
   :root {
     --cor-destaque: #1559B7;
+    --fundo-claro: #f8f9fa;
+    --fundo-escuro: #000;
+    --texto-claro: #fff;
+    --texto-escuro: #000;
+    --cor-hover: #007BFF;
   }
+
+/*Geral*/
+
+
+body {
+  margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Estilos do carrossel */
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-content {
+  max-width: 50%;
+}
+
+.carousel-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.explore-button {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--texto-claro);
+  background: transparent;
+  color: var(--texto-claro);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.explore-button:hover {
+  background-color: var(--texto-claro);
+  color: var(--texto-escuro);
+}
+
+/* Imagens do carrossel */
+.carousel-image {
+  max-width: 45%;
+}
+
+.carousel-image img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -93,3 +173,125 @@
     border-radius: 0%;
     border-width: 2px;
   }
+
+/*SObre nos*/
+
+.sobre-nos {
+  text-align: center;
+  padding: 20px;
+}
+
+.sobre-nos h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.sobre-nos .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap:wrap;
+}
+
+.sobre-nos .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sobre-nos .card img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.sobre-nos .card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.sobre-nos .card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.sobre-nos .info-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  border: 1px solid #0066cc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sobre-nos .info-button:hover {
+  background: #0066cc;
+  color: #fff;
+}
+
+/*Explora o Mundo Configs*/
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  background: url('img\Background img city.png') no-repeat center center/cover;
+  height: 100vh; /* Altura de 100% da viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for better text visibility */
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .explore-button:hover {
+  background: #000;
+  color: #fff;
+}

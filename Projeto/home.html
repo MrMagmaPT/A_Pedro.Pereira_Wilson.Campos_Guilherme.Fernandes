@@ -49,53 +49,126 @@
             </nav>
         </header>
         <main>
+
             <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <!-- Indicadores do Carousel -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
+            
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                        <div class="container">
-                            <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background-color: #f8f9fa;">
+                      <div class="container d-flex align-items-center">
+                        <div class="carousel-content text-start">
+                          <h1>Descobre o Japão</h1>
+                          <p>Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.</p>
+                          <p>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p>
+                          <button class="explore-button">Explorar</button>
+                        </div>
+                        <div class="carousel-image">
+                          <img src="img/Japanese Temple.png" alt="Templo Japonês" />
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="background-color: #000;">
+                      <div class="container d-flex align-items-center">
+                        <div class="carousel-content text-start text-light">
+                          <h1>Descobre a Austrália</h1>
+                          <p>Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de Sydney e o vasto Outback.</p>
+                          <p>A Austrália oferece uma vida selvagem única, costas ensolaradas e paisagens diversificadas.</p>
+                          <button class="explore-button">Explorar</button>
+                        </div>
+                        <div class="carousel-image">
+                          <img src="img/Australia Section.png" alt="Sydney Building" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+                <!-- Controles do Carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+        <div class="container text-center mt-5">
+            <h1 class="fw-bold">Escolha o País</h1>
+            <p>Escolha um destino para explorar a sua singularidade, cultura e atrações. Descubra os lugares mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.</p>
+            <div class="row mt-4">
+                <!-- Estados Unidos -->
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" class="card-img-top" alt="Estados Unidos">
+                        <div class="card-body">
+                            <h5 class="card-title">Estados Unidos da América</h5>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                <!-- Canadá -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" class="card-img-top" alt="Canadá">
+                        <div class="card-body">
+                            <h5 class="card-title">Canadá</h5>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                <!-- Reino Unido -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" class="card-img-top" alt="Reino Unido">
+                        <div class="card-body">
+                            <h5 class="card-title">Reino Unido</h5>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explora O Mundo Connosco</h1>
+                <p>Embarca numa aventura para descobrir os destinos mais cativantes do mundo, desde paisagens urbanas vibrantes até serenas maravilhas naturais. Explora o encanto único de cada país, rico em cultura, história e experiências inesquecíveis. Deixa-nos ser o teu guia até lugares que inspiram e despertam o espírito de exploração. Em cada viagem, descobre novas perspetivas e tesouros escondidos à espera de serem revelados. Começa a tua aventura hoje e cria memórias que durarão para toda a vida.</p>
+                <a href="#" class="explore-button">Explorar</a>
+            </div>
+        </section>
+
+    <section class="sobre-nos">
+        <h1><b>Sobre Nós</b></h1>
+        <div class="cards-container">
+            <div class="card">
+                <img src="img/Australia Section.png" alt="Pedro">
+                <h2>PEDRO</h2>
+                <p>Estudante</p>
+                <a href="#" class="info-button">Mais Informações &gt;</a>
+            </div>
+            <div class="card">
+                <img src="img/Australia Section.png" alt="Wilson">
+                <h2>Wilson</h2>
+                <p>Estudante</p>
+                <a href="#" class="info-button">Mais Informações &gt;</a>
+            </div>
+            <div class="card">
+                <img src="img/Australia Section.png" alt="Guilherme">
+                <h2>Guilherme</h2>
+                <p>Estudante</p>
+                <a href="#" class="info-button">Mais Informações &gt;</a>
+            </div>
+        </div>
+    </section>
+
         <script src="script/bootstrap.bundle.min.js"></script>
     </body>
 </html> 
+
+
