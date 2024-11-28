@@ -5,6 +5,7 @@
     --texto-claro: #fff;
     --texto-escuro: #000;
     --cor-hover: #007BFF;
+    --cor-button:rgba(217, 217, 217, 1);
   }
 
 /*Geral*/
@@ -92,9 +93,24 @@ body {
   align-items: center;
   transform: translateY(-450%);
   transform: translatex(650%);
-  height: 4px;
-  width: 74px;
+  opacity: 1;
+  /*background-color: rgba(217, 217, 217, 1);*/
 }
+
+.carousel-indicators [data-bs-target] {
+  width: 274px;
+  height: 5px;
+  }
+
+
+  [data-bs-theme=dark] .carousel-dark .carousel-indicators [data-bs-target], [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], .carousel-dark .carousel-indicators [data-bs-target], .carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--bs-yellow);
+    opacity: 1;
+  }
+  
+  [data-bs-theme=dark] .carousel-dark [data-bs-target].active, [data-bs-theme=dark] .carousel [data-bs-target].active, .carousel-dark [data-bs-target].active, .carousel [data-bs-target].active {
+    background-color: var(--bs-blue);
+  }
 
 /* Imagens do carrossel */
 .carousel-image {
