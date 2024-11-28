@@ -70,6 +70,32 @@ body {
   color: var(--texto-escuro);
 }
 
+.explore-button-Escuro {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--texto-claro);
+  background: transparent;
+  color: var(--texto-claro);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.explore-button-Escuro:hover {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+}
+
+.carousel-indicators {
+
+  position: flex;
+  align-items: center;
+  transform: translateY(-450%);
+  transform: translatex(650%);
+  height: 4px;
+  width: 74px;
+}
+
 /* Imagens do carrossel */
 .carousel-image {
   max-width: 45%;
