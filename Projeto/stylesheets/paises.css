@@ -10,8 +10,8 @@
 
 html[data-theme='light']{
     --bgColor : hsl(0, 0%, 98%);
-    --headerColor: white;
-    --textColor: black;
+    --headerColor: rgb(131, 121, 121);
+    --textColor: rgb(255, 255, 255);
     --shadowColor: #dfdede;
 }
 
