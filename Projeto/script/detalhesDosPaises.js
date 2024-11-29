@@ -1,7 +1,7 @@
 
 jsonData = localStorage['jsonData'];
-// console.log("json");
-// console.log(JSON.parse(jsonData));
+    console.log("json");
+    console.log(JSON.parse(jsonData));
 
 var countriesData = JSON.parse(jsonData);
 

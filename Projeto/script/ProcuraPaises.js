@@ -42,9 +42,9 @@ fetchCountries = async () => {
         var c_box = document.querySelector('#countries-box');
         c_box.appendChild(div);
 
-        // if (i === 10) {
-        //     return;
-        // }
+        if (i === 10) {
+             return;
+        }
     }
 
     console.log(c_box);
@@ -91,7 +91,7 @@ function selectRegions() {
 }
 
 function toggleTheme() {
-    // alert('clicked');
+        alert('clicked');
     debugger
 
     var currentTheme = document.documentElement.getAttribute('data-theme');
@@ -114,7 +114,7 @@ function toggleTheme() {
 
 function displayCountryDetails(e, myJson) {
     
-    // console.log(myJson);
+        console.log(myJson);
 
     var main = document.getElementsByClassName('main');
     var section = document.getElementsByClassName('details-section');
@@ -123,7 +123,7 @@ function displayCountryDetails(e, myJson) {
     if (e.target.tagName === "IMG" || e.target.tagName === "H3" || e.target.tagName === "UL") {
         var parent = e.target.parentElement;
         var children = parent.children;
-        // console.log("JSON"+ myJson);
+            console.log("JSON"+ myJson);
         main[0].style.display = "none";
         section[0].style.display = "block";
 
@@ -187,16 +187,16 @@ function setData(myJson, children, section, recursion) {
             const ul = document.getElementById('neighboring-countries')
             ul.innerHTML = '';
 
-            // if(nearbyCountryCodes.length === 0) {
-            //     return;
-            // }
+            if(nearbyCountryCodes.length === 0) {
+                 return;
+            }
 
             for (var j = 0; j < nearbyCountries.length; j++) {
                 var li = document.createElement('li');
                 li.textContent = nearbyCountries[j];
 
                 li.addEventListener('click', function (e) {
-                    // debugger
+                        debugger
                     setData(myJson, e.target.innerText, section, true);
                 })
 
