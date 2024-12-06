@@ -212,176 +212,7 @@ body {
     border-width: 2px;
   }
 
-/*Escolha o pais*/
-.escolha-pais {
-  font-weight: bolder;
-  font-size: 56px;
-}
 
-.col-md-4{
-  border: #000 solid 3px;
-  /* margin: 0px 5px; */
-  margin-bottom: 20px;
-  width: 32%;
-  margin-bottom: 120px;
-
-
-
-}
-.col-md-4:hover{
-  border: #04F solid 3px;
-}
-.col-md-4 .card{
-  padding: 25px;
-  padding-bottom: 0;
-  background-color: white;
-  color: #000 ;
-
-}
-.col-md-4 .card .card-body{
-  font-size: 2rem;
-  font-weight: bolder;
-  
-}
-.linha{
-  width: 100% !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-/*SObre nos*/
-
-.sobre-nos {
-  font-size: 56px;
-  text-align: center;
-  padding: 20px;
-}
-
-.sobre-nos .cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap:wrap;
-}
-
-.sobre-nos .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 400px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.sobre-nos .card img{
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-  margin-bottom: 15px;
-}
-
-.sobre-nos .card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  color: black;
-  font-weight: bolder;
-}
-
-.sobre-nos .card p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #666;
-}
-.sobre-nos .img-alunos{
-  overflow-y: hidden;
-  display:flex;
-  height: 360px;
-}
-
-.sobre-nos .info-button {
-  display: inline-block;
-  margin: auto;
-  text-decoration: none;
-  color: #0066cc;
-  font-weight: 300;
-  font-size: 1rem;
-  border: 1px solid #0066cc;
-  padding: 5px 5px;
-  border-radius: 0px !important;
-  transition: all 0.3s ease;
-}
-
-.sobre-nos .info-button:hover {
-  background: #0066cc;
-  color: #fff;
-}
-
-/*Explora o Mundo Configs*/
-
-/* Hero Section */
-
-.hero {
-  position: relative;
-  background-color: red;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%; /* Altura de 100% da viewport */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  margin-top: auto;
-}
-.hero img{
-  position: absolute;
-  margin: 0;
-  width: 100%;
-  height: 560px;
-}
-
-.hero-content {
-  position: relative;
-  width: 100%;
-  height: 560px;
-  padding: 20px;
-  background-color: #000000BF;
-}
-
-.hero h1 {
-  margin-top: 100px;
-  font-size: 5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: auto;
-  max-width: 800px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 30px;
-}
-
-.explore-button {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 1rem;
-  color: #000;
-  background: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.hero .explore-button:hover {
-  background: #000;
-  color: #fff;
-}
 
 /*Footer*/
 
@@ -441,9 +272,7 @@ body {
 
 /* PAISES */
 
-body {
-    font-family: 'Nunito Sans', sans-serif;
-}
+
 
 .container.text-center {
     margin-top: 50px;
@@ -458,9 +287,7 @@ body {
     margin-top: 20px;
 }
 
-.card {
-    margin-bottom: 20px;
-}
+
 
 /* Estilo para o formulário de entrada */
 .input-form {
@@ -484,4 +311,36 @@ body {
     font-style: italic;
 }
 
+/* Estilo para todos os cards */
+.col-md-4 {
+    width: 32%;
+    margin-bottom: 20px;
+}
+
+.card {
+    height: 250px; /* Altura fixa para todos os cards */
+    background-color: white; /* Fundo padrão branco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    max-height: 150px; /* Altura máxima da imagem */
+    width: auto;
+    background-color: black; /* Fundo preto para a imagem */
+    padding: 5px; /* Padding para criar espaço ao redor da imagem */
+}
+
+.card-body {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Ajuste de cor de fundo para imagens que não ficam bem com fundo branco */
+.card img[alt="Nome do País"] {
+    background-color: black; /* Fundo preto para bandeiras específicas */
+}
 
