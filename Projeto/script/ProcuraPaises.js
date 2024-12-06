@@ -1,218 +1,242 @@
-fetchCountries = async () => {
-    const response = await fetch('https://restcountries.com/v2/all');
-    const myJson = await response.json(); //extract JSON from the http response
-    console.log(myJson);
-    localStorage['jsonData'] = JSON.stringify(myJson);
+const countryNamesPT = {
+    "Afghanistan": "Afeganistão",
+    "Albania": "Albânia",
+    "Algeria": "Argélia",
+    "Andorra": "Andorra",
+    "Angola": "Angola",
+    "Antigua and Barbuda": "Antígua e Barbuda",
+    "Argentina": "Argentina",
+    "Armenia": "Arménia",
+    "Australia": "Austrália",
+    "Austria": "Áustria",
+    "Azerbaijan": "Azerbaijão",
+    "Bahamas": "Bahamas",
+    "Bahrain": "Barém",
+    "Bangladesh": "Bangladesh",
+    "Barbados": "Barbados",
+    "Belarus": "Bielorrússia",
+    "Belgium": "Bélgica",
+    "Belize": "Belize",
+    "Benin": "Benim",
+    "Bhutan": "Butão",
+    "Bolivia": "Bolívia",
+    "Bosnia and Herzegovina": "Bósnia e Herzegovina",
+    "Botswana": "Botsuana",
+    "Brazil": "Brasil",
+    "Brunei": "Brunei",
+    "Bulgaria": "Bulgária",
+    "Burkina Faso": "Burquina Faso",
+    "Burundi": "Burundi",
+    "Cabo Verde": "Cabo Verde",
+    "Cambodia": "Camboja",
+    "Cameroon": "Camarões",
+    "Canada": "Canadá",
+    "Central African Republic": "República Centro-Africana",
+    "Chad": "Chade",
+    "Chile": "Chile",
+    "China": "China",
+    "Colombia": "Colômbia",
+    "Comoros": "Comores",
+    "Congo (Congo-Brazzaville)": "Congo (Congo-Brazzaville)",
+    "Costa Rica": "Costa Rica",
+    "Croatia": "Croácia",
+    "Cuba": "Cuba",
+    "Cyprus": "Chipre",
+    "Czechia (Czech Republic)": "Chequia (República Checa)",
+    "Denmark": "Dinamarca",
+    "Djibouti": "Djibouti",
+    "Dominica": "Dominica",
+    "Dominican Republic": "República Dominicana",
+    "DR Congo (Congo-Kinshasa)": "República Democrática do Congo (Congo-Kinshasa)",
+    "Ecuador": "Equador",
+    "Egypt": "Egito",
+    "El Salvador": "El Salvador",
+    "Equatorial Guinea": "Guiné Equatorial",
+    "Eritrea": "Eritreia",
+    "Estonia": "Estónia",
+    "Eswatini": "Eswatini",
+    "Ethiopia": "Etiópia",
+    "Fiji": "Fiji",
+    "Finland": "Finlândia",
+    "France": "França",
+    "Gabon": "Gabão",
+    "Gambia": "Gâmbia",
+    "Georgia": "Geórgia",
+    "Germany": "Alemanha",
+    "Ghana": "Gana",
+    "Greece": "Grécia",
+    "Grenada": "Granada",
+    "Guatemala": "Guatemala",
+    "Guinea": "Guiné",
+    "Guinea-Bissau": "Guiné-Bissau",
+    "Guyana": "Guiana",
+    "Haiti": "Haiti",
+    "Honduras": "Honduras",
+    "Hungary": "Hungria",
+    "Iceland": "Islândia",
+    "India": "Índia",
+    "Indonesia": "Indonésia",
+    "Iran": "Irão",
+    "Iraq": "Iraque",
+    "Ireland": "Irlanda",
+    "Israel": "Israel",
+    "Italy": "Itália",
+    "Jamaica": "Jamaica",
+    "Japan": "Japão",
+    "Jordan": "Jordânia",
+    "Kazakhstan": "Cazaquistão",
+    "Kenya": "Quénia",
+    "Kiribati": "Kiribati",
+    "Kuwait": "Kuwait",
+    "Kyrgyzstan": "Quirguistão",
+    "Laos": "Laos",
+    "Latvia": "Letónia",
+    "Lebanon": "Líbano",
+    "Lesotho": "Lesoto",
+    "Liberia": "Libéria",
+    "Libya": "Líbia",
+    "Liechtenstein": "Liechtenstein",
+    "Lithuania": "Lituânia",
+    "Luxembourg": "Luxemburgo",
+    "Madagascar": "Madagáscar",
+    "Malawi": "Malawi",
+    "Malaysia": "Malásia",
+    "Maldives": "Maldivas",
+    "Mali": "Mali",
+    "Malta": "Malta",
+    "Marshall Islands": "Ilhas Marshall",
+    "Mauritania": "Mauritânia",
+    "Mauritius": "Maurícia",
+    "Mexico": "México",
+    "Micronesia": "Micronésia",
+    "Moldova": "Moldávia",
+    "Monaco": "Mónaco",
+    "Mongolia": "Mongólia",
+    "Montenegro": "Montenegro",
+    "Morocco": "Marrocos",
+    "Mozambique": "Moçambique",
+    "Myanmar (Burma)": "Mianmar (Birmânia)",
+    "Namibia": "Namíbia",
+    "Nauru": "Nauru",
+    "Nepal": "Nepal",
+    "Netherlands": "Países Baixos",
+    "New Zealand": "Nova Zelândia",
+    "Nicaragua": "Nicarágua",
+    "Niger": "Níger",
+    "Nigeria": "Nigéria",
+    "North Korea": "Coreia do Norte",
+    "North Macedonia": "Macedônia do Norte",
+    "Norway": "Noruega",
+    "Oman": "Omã",
+    "Pakistan": "Paquistão",
+    "Palau": "Palau",
+    "Palestine State": "Estado da Palestina",
+    "Panama": "Panamá",
+    "Papua New Guinea": "Papua Nova Guiné",
+    "Paraguay": "Paraguai",
+    "Peru": "Peru",
+    "Philippines": "Filipinas",
+    "Poland": "Polônia",
+    "Portugal": "Portugal",
+    "Qatar": "Catar",
+    "Romania": "Romênia",
+    "Russia": "Rússia",
+    "Rwanda": "Ruanda",
+    "Saint Kitts and Nevis": "São Cristóvão e Nevis",
+    "Saint Lucia": "Santa Lúcia",
+    "Saint Vincent and the Grenadines": "São Vicente e Granadinas",
+    "Samoa": "Samoa",
+    "San Marino": "San Marino",
+    "Sao Tome and Principe": "São Tomé e Príncipe",
+    "Saudi Arabia": "Arábia Saudita",
+    "Senegal": "Senegal",
+    "Serbia": "Sérvia",
+    "Seychelles": "Seicheles",
+    "Sierra Leone": "Serra Leoa",
+    "Singapore": "Singapura",
+    "Slovakia": "Eslováquia",
+    "Slovenia": "Eslovênia",
+    "Solomon Islands": "Ilhas Salomão",
+    "Somalia": "Somália",
+    "South Africa": "África do Sul",
+    "South Korea": "Coreia do Sul",
+    "South Sudan": "Sudão do Sul",
+    "Spain": "Espanha",
+    "Sri Lanka": "Sri Lanka",
+    "Sudan": "Sudão",
+    "Suriname": "Suriname",
+    "Sweden": "Suécia",
+    "Switzerland": "Suíça",
+    "Syria": "Síria",
+    "Taiwan": "Taiwan",
+    "Tajikistan": "Tajiquistão",
+    "Tanzania": "Tanzânia",
+    "Thailand": "Tailândia",
+    "Timor-Leste": "Timor-Leste",
+    "Togo": "Togo",
+    "Tonga": "Tonga",
+    "Trinidad and Tobago": "Trindade e Tobago",
+    "Tunisia": "Tunísia",
+    "Turkey": "Turquia",
+    "Turkmenistan": "Turquemenistão",
+    "Tuvalu": "Tuvalu",
+    "Uganda": "Uganda",
+    "Ukraine": "Ucrânia",
+    "United Arab Emirates": "Emirados Árabes Unidos",
+    "United Kingdom": "Reino Unido",
+    "United States of America": "Estados Unidos da América",
+    "Uruguay": "Uruguai",
+    "Uzbekistan": "Uzbequistão",
+    "Vanuatu": "Vanuatu",
+    "Vatican City": "Cidade do Vaticano",
+    "Venezuela": "Venezuela",
+};
 
-    debugger
+// Função para criar um card de país
+function createCountryCard(country, countryName) {
+    const countryCard = document.createElement('div');
+    countryCard.className = 'col-md-4';
+    countryCard.innerHTML = `
+        <div class="card">
+            <img src="${country.flags.png}" class="card-img-top" alt="${countryName}">
+            <div class="card-body">
+                <h5 class="card-title">${countryName}</h5>
+            </div>
+        </div>
+    `;
+    return countryCard;
+}
 
+document.addEventListener("DOMContentLoaded", function() {
+    const countriesContainer = document.getElementById('countries');
+    let countriesData = [];
 
-    for (var i = 0; i < myJson.length; i++) {
-        const div = document.createElement('div');
-        div.classList.add('country-item');
+    // Função para exibir os países
+    function displayCountries(countries) {
+        countriesContainer.innerHTML = '';  // Limpar os cards existentes
+        countries.forEach(country => {
+            const countryName = countryNamesPT[country.name.common] || country.name.common;
+            const countryCard = createCountryCard(country, countryName);
+            countriesContainer.appendChild(countryCard);
+        });
+    }
 
-        const img = document.createElement('img');
-        img.classList.add('flag');
-        img.setAttribute('src', myJson[i].flag);
-        img.setAttribute('alt', "flag-img");
-
-        const h3 = document.createElement('h3');
-        h3.textContent = myJson[i].name;
-
-        var li_list = ["Population", "Region", "Capital"];
-        var li_values = [myJson[i].population, myJson[i].region, myJson[i].capital];
-
-        const ul = document.createElement('ul');
-
-        for (var j = 0; j < li_list.length; j++) {
-            const li = document.createElement('li');
-            li.textContent = li_list[j] + ": " + li_values[j];
-            ul.appendChild(li);
-        }
-
-
-        div.appendChild(img);
-        div.appendChild(h3);
-        div.appendChild(ul);
-
-        div.addEventListener('click', function (e) {
-            displayCountryDetails(e, myJson);
+    fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json())
+        .then(countries => {
+            countriesData = countries;
+            displayCountries(countries);
         })
+        .catch(error => console.error('Erro ao buscar países:', error));
 
-        var c_box = document.querySelector('#countries-box');
-        c_box.appendChild(div);
-
-        if (i === 10) {
-             return;
-        }
-    }
-
-    console.log(c_box);
-}
-
-fetchCountries();
-
-debugger
-const search = document.forms['input-form'].querySelector('input');
-search.addEventListener('keyup', function (e) {
-    const searchTerm = e.target.value.toLowerCase();
-    const countries = document.getElementsByTagName('h3');
-
-    document.getElementById('regions').selectedIndex = 0;
-
-    Array.from(countries).forEach(function (country) {
-        if (country.innerText.toLowerCase().indexOf(searchTerm) != -1) {
-            country.parentElement.style.display = "block";
-        } else {
-            country.parentElement.style.display = "none";
-        }
-    })
-})
-
-function selectRegions() {
-    const list = document.getElementById('regions');
-    debugger
-
-    document.getElementById('search').value = "";
-
-    const selected_region = list.options[list.selectedIndex].text.toLowerCase();
-
-    const regions = document.getElementsByTagName('li');
-
-    for (var i = 1; i < regions.length; i += 3) {
-        if (regions[i].innerText.toLowerCase().indexOf(selected_region) != -1) {
-            regions[i].parentElement.parentElement.style.display = "block";
-        } else {
-            regions[i].parentElement.parentElement.style.display = "none";
-        }
-    }
-
-    console.log(list);
-}
-
-function toggleTheme() {
-        alert('clicked');
-    debugger
-
-    var currentTheme = document.documentElement.getAttribute('data-theme');
-    var text = document.getElementById('dark-mode-text');
-
-    if (currentTheme === 'light') {
-        targetTheme = 'dark';
-        text.innerText = "Light Mode";
-        document.getElementsByTagName('ion-icon')[0].setAttribute('name', 'sunny-outline');
-    } else if (currentTheme === 'dark') {
-        targetTheme = 'light';
-        text.innerText = "Dark Mode";
-        document.getElementsByTagName('ion-icon')[0].setAttribute('name', 'moon-outline');
-    }
-
-    document.documentElement.setAttribute('data-theme', targetTheme);
-
-}
-
-
-function displayCountryDetails(e, myJson) {
-    
-        console.log(myJson);
-
-    var main = document.getElementsByClassName('main');
-    var section = document.getElementsByClassName('details-section');
-
-    debugger
-    if (e.target.tagName === "IMG" || e.target.tagName === "H3" || e.target.tagName === "UL") {
-        var parent = e.target.parentElement;
-        var children = parent.children;
-            console.log("JSON"+ myJson);
-        main[0].style.display = "none";
-        section[0].style.display = "block";
-
-        setData(myJson, children, section, false);
-
-    } else if (e.target.tagName === "LI") {
-        var parent = e.target.parentElement.parentElement;
-        var children = parent.children;
-        main[0].style.display = "none";
-        section[0].style.display = "block";
-
-        setData(myJson, children, section, false);
-
-    }
-}
-
-function setData(myJson, children, section, recursion) {
-    debugger
-    var textgrid = document.getElementsByClassName('text-grid');
-    textgrid[0].style.display = "grid";
-    for (var i = 0; i < myJson.length; i++) {
-        if (myJson[i].name.toLowerCase() === (recursion ? children.toLowerCase() : children[1].innerText.toLowerCase())) {
-            section[0].querySelectorAll('h3')[0].innerText = myJson[i].name;
-            section[0].querySelectorAll('img')[0].src = myJson[i].flag;
-            section[0].querySelectorAll('img')[0].alt = "flag-image";
-            section[0].querySelectorAll('.native-name')[0].innerText = myJson[i].nativeName;
-            section[0].querySelectorAll('.region')[0].innerText = myJson[i].region;
-            if(myJson[i] && myJson[i].capital){
-                section[0].querySelectorAll('.capital')[0].innerText = myJson[i].capital;
-            }else{
-                section[0].querySelectorAll('.capital')[0].innerText = "";
-            }
-            
-            if(myJson[i] && myJson[i].currencies){
-                section[0].querySelectorAll('.currencies')[0].innerText = myJson[i].currencies[0].name;
-            }else{
-                section[0].querySelectorAll('.currencies')[0].innerText = "";
-            }     
-            section[0].querySelectorAll('.population')[0].innerText = myJson[i].population;
-            section[0].querySelectorAll('.sub-region')[0].innerText = myJson[i].subregion;
-            section[0].querySelectorAll('.tld')[0].innerText = myJson[i].topLevelDomain[0];
-            section[0].querySelectorAll('.languages')[0].innerText = myJson[i].languages[0].name;
-
-            var nearbyCountryCodes = myJson[i].borders;
-            var nearbyCountries = [];
-
-            debugger
-            if(myJson[i] && myJson[i].borders){
-                for (var j = 0; j < myJson.length; j++) {
-                    for (k = 0; k < nearbyCountryCodes.length; k++) {
-                        if (myJson[j].alpha3Code === nearbyCountryCodes[k]) {
-                            nearbyCountries.push(myJson[j].name);
-                        }
-                    }
-                }
-            }else{
-                nearbyCountries.push("I do not have any borders!");
-            }
-            
-
-            const ul = document.getElementById('neighboring-countries')
-            ul.innerHTML = '';
-
-            if(nearbyCountryCodes.length === 0) {
-                 return;
-            }
-
-            for (var j = 0; j < nearbyCountries.length; j++) {
-                var li = document.createElement('li');
-                li.textContent = nearbyCountries[j];
-
-                li.addEventListener('click', function (e) {
-                        debugger
-                    setData(myJson, e.target.innerText, section, true);
-                })
-
-                ul.appendChild(li);
-            }
-
-            console.log(nearbyCountries);
-        }
-    }
-}
-
-function back() {
-    const main = document.getElementsByClassName('main');
-    const section = document.getElementsByClassName('details-section');
-
-    section[0].style.display = "none";
-    main[0].style.display = "block";
-
-}
+    // Adicionar evento de pesquisa
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredCountries = countriesData.filter(country => {
+            const countryName = countryNamesPT[country.name.common] || country.name.common;
+            return countryName.toLowerCase().includes(searchTerm);
+        });
+        displayCountries(filteredCountries);
+    });
+});
