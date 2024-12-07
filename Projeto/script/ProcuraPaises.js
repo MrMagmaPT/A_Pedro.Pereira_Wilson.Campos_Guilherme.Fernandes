@@ -192,6 +192,7 @@ const countryNamesPT = {
     "Venezuela": "Venezuela",
 };
 
+
 // Função para criar um card de país
 function createCountryCard(country, countryName) {
     const countryCard = document.createElement('div');
@@ -204,6 +205,9 @@ function createCountryCard(country, countryName) {
             </div>
         </div>
     `;
+    countryCard.addEventListener('click', () => {
+        window.location.href = `detalhes.html?name=${country.name.common}`;
+    });
     return countryCard;
 }
 
@@ -240,4 +244,5 @@ document.addEventListener("DOMContentLoaded", function() {
         displayCountries(filteredCountries);
     });
 });
+
 
