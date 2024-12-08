@@ -1,4 +1,4 @@
-const countryNamesPT = {
+/*const countryNamesPT = {
     "Afghanistan": "Afeganistão",
     "Albania": "Albânia",
     "Algeria": "Argélia",
@@ -191,7 +191,7 @@ const countryNamesPT = {
     "Vatican City": "Cidade do Vaticano",
     "Venezuela": "Venezuela",
 };
-
+*/
 
 // Função para criar um card de país
 function createCountryCard(country, countryName) {
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayCountries(countries) {
         countriesContainer.innerHTML = '';  // Limpar os cards existentes
         countries.forEach(country => {
-            const countryName = countryNamesPT[country.name.common] || country.name.common;
+            const countryName = country.name.common;
             const countryCard = createCountryCard(country, countryName);
             countriesContainer.appendChild(countryCard);
         });
@@ -238,11 +238,10 @@ document.addEventListener("DOMContentLoaded", function() {
     searchInput.addEventListener('input', function() {
         const searchTerm = searchInput.value.toLowerCase();
         const filteredCountries = countriesData.filter(country => {
-            const countryName = countryNamesPT[country.name.common] || country.name.common;
+            const countryName = country.name.common;
             return countryName.toLowerCase().includes(searchTerm);
         });
         displayCountries(filteredCountries);
     });
 });
-
 
