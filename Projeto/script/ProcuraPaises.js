@@ -206,7 +206,7 @@ function createCountryCard(country, countryName) {
         </div>
     `;
     countryCard.addEventListener('click', () => {
-        window.location.href = `detalhes.html?name=${country.name.common}`;
+        window.location.href = `detalhes.html?name=${countryName}`;
     });
     return countryCard;
 }

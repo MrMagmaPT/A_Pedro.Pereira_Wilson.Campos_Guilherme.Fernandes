@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const countryName = urlParams.get('name');
     console.log('Country Name:', countryName);  // Log para depuração
 
-    fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+    fetch(`https://restcountries.com/v3.1/name/${country.name.common}`)
         .then(response => {
             console.log('API Response:', response);  // Log para depuração
             return response.json();
