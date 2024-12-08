@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log('Country Name:', countryName); // Log para depuração
 
     fetch(`https://restcountries.com/v3.1/name/${country.name.common}`)
-        .then(response => {
-            console.log('API Response:', response); // Log para depuração
-            return response.json();
-        })
         .then(countries => {
             console.log('Country Data:', countries); // Log para depuração
             const country = countries[0];
