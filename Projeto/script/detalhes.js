@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const countryName = urlParams.get('name');
     console.log('Country Name:', countryName);  // Log para depuração
 
-    fetch(`https://restcountries.com/v3.1/name/${country.name.common}`)
+    fetch(`https://restcountries.com/v3.1/name/${countryName}`)
         .then(response => {
             console.log('API Response:', response);  // Log para depuração
             return response.json();
@@ -21,3 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Erro ao buscar detalhes do país:', error));
 });
+
+jsonData = localStorage['jsonData'];
+console.log("json");
+console.log(JSON.parse(jsonData));
+
+var countriesData = JSON.parse(jsonData);
+
+
+for(var i=0;i<countriesData.length;i++){
+    console.log(countriesData[i].name);
+}
