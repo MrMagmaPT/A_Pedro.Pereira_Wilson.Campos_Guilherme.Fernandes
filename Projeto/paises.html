@@ -52,72 +52,68 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="main">
+            <!-- SearchBar para os paises  -->
+            <div class="input-form">
+                <input type="text" id="pais_nome" name="search" placeholder="Procure por um País...">
+                <button type="submit" id="btn-search" class="btn btn-outline-primary me-2 btn-contactos">Procurar Pais</button>
+            </div>
 
-        </main>
-
-      
-
-       <!-- SearchBar-->
-       <main class="main">
-        <form class="input-form" id="input-form">
-            <input type="text" id="search" name="search" placeholder="Procure por um País...">
-        </form>
-
-    <!-- Exemplo de Card -->
-
-        <div class="container text-center mt-5">
-            <p class="escolha-pais">Países</p>
-            <div class="row mt-4 linha" id="countries">       
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="" class="card-img-top" alt="País">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do País</h5>
+            
+            <div class="container text-center mt-5">
+                <p class="escolha-pais">Países</p>
+                
+                <!-- Exemplo de Card -->
+                <div class="row mt-4 linha" id="countries">       
+                    <div class="col-md-4 card-countries">
+                        <div class="card">
+                            <img src="" class="card-img-top" alt="País">
+                            <div class="card-body">
+                                <h5 class="card-title">Nome do País</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
-    
 
-    <footer class="footer">
-        <div class="container text-center">
-            <!-- Logo -->
-            <a href="#">
-                <img src="img/IPL - Logo.png" alt="Politécnico de Leiria" class="footer-logo">
-            </a>
-    
-            <!-- Navigation Links -->
-            <nav class="footer-nav">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="home.html">Home</a></li>
-                    <li class="list-inline-item"><a href="paises.html">Países</a></li>
-                    <li class="list-inline-item"><a href="loja.html">Loja</a></li>
-                    <li class="list-inline-item"><a href="sobre.html">Sobre</a></li>
-                    <li class="list-inline-item"><a href="contactos.html">Contactos</a></li>
-                </ul>
-            </nav>
-    
-            <!-- Social Media Icons -->
-            <div class="social-icons">
-                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" aria-label="X"><i class="bi bi-twitter"></i></a>
             </div>
-    
-            <!-- Copyright -->
-            <div class="footer-copyright">
-                <p>© 2024 Direitos de Autor, Todos os direitos reservados</p>
+        </main>
+        <footer class="footer">
+            <div class="container text-center">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="img/IPL - Logo.png" alt="Politécnico de Leiria" class="footer-logo">
+                </a>
+        
+                <!-- Navigation Links -->
+                <nav class="footer-nav">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="home.html">Home</a></li>
+                        <li class="list-inline-item"><a href="paises.html">Países</a></li>
+                        <li class="list-inline-item"><a href="loja.html">Loja</a></li>
+                        <li class="list-inline-item"><a href="sobre.html">Sobre</a></li>
+                        <li class="list-inline-item"><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </nav>
+        
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="bi bi-twitter"></i></a>
+                </div>
+        
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    <p>© 2024 Direitos de Autor, Todos os direitos reservados</p>
+                </div>
             </div>
-        </div>
-    </footer>
-
-    <script src="script/bootstrap.bundle.min.js"></script>
-    <script src="script/ProcuraPaises.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script/bootstrap.bundle.min.js"></script>
+        <script src="script/ProcuraPaises.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
     </body>
 </html> 
