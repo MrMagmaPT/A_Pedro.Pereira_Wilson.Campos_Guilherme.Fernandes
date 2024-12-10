@@ -3,16 +3,17 @@
     <head>
         <script src="script/color-modes.js"></script>
         <meta charset="utf-8"> <!--Definição de caracteres que podem aparecer -->
-        <title>DetalhesDosPaises</title> <!-- Titulo da página -->
+        <title>Paises</title> <!-- Titulo da página -->
         <meta name="description" content="Trabalho de Projeto de IPWeb e IAPSI"> <!--descrição da página-->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tamanho do Viewport e como é escalado-->
         <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/carousel.css">
         <link rel="stylesheet" href="stylesheets/FolhaEstilos_1.css">
         <link rel="icon" type="image/x-icon" href="img/icons/paises.ico">
-        <link rel="stylesheet" href="stylesheets/detalhes.css">
-
-        
+        <link rel="stylesheet" href="stylesheets/paises.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
     </head>
     <body>
         <header data-bs-theme="light">
@@ -54,43 +55,69 @@
         <main>
 
         </main>
-         
-            <div class="container mt-5">
-                <h1 id="country-name">Nome do País</h1>
-                <table class="table table-striped">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Capital</th>
-                            <td id="capital"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Região</th>
-                            <td id="region"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Sub-região</th>
-                            <td id="subregion"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">População</th>
-                            <td id="population"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Área</th>
-                            <td id="area"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Bandeira</th>
-                            <td><img id="flag" src="" alt="Bandeira do País" width="100"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="paises.html" class="btn btn-primary">Voltar</a>
-            </div>   
 
-            <script src="script/bootstrap.bundle.min.js"></script>
-            <script src="script/detalhesPaises.js"></script>
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      
+
+       <!-- SearchBar-->
+       <main class="main">
+        <form class="input-form" id="input-form">
+            <input type="text" id="search" name="search" placeholder="Procure por um País...">
+        </form>
+
+    <!-- Exemplo de Card -->
+
+        <div class="container text-center mt-5">
+            <p class="escolha-pais">Países</p>
+            <div class="row mt-4 linha" id="countries">       
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="" class="card-img-top" alt="País">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome do País</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer class="footer">
+        <div class="container text-center">
+            <!-- Logo -->
+            <a href="#">
+                <img src="img/IPL - Logo.png" alt="Politécnico de Leiria" class="footer-logo">
+            </a>
+    
+            <!-- Navigation Links -->
+            <nav class="footer-nav">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="home.html">Home</a></li>
+                    <li class="list-inline-item"><a href="paises.html">Países</a></li>
+                    <li class="list-inline-item"><a href="loja.html">Loja</a></li>
+                    <li class="list-inline-item"><a href="sobre.html">Sobre</a></li>
+                    <li class="list-inline-item"><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="X"><i class="bi bi-twitter"></i></a>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                <p>© 2024 Direitos de Autor, Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/ProcuraPaises.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html> 
