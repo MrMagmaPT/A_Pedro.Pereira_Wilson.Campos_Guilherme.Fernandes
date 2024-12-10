@@ -23,8 +23,5 @@ $('#btn-search').on('click', function(){
             $('.card-title',cloneCard).text(element.name.common);
             $('#countries').append(cloneCard)
         });
-
-
-        //for(var i=0; i< dados.Search.length;i++) {}
     });
 });  

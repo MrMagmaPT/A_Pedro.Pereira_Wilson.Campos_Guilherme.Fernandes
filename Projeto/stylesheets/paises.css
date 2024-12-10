@@ -321,7 +321,7 @@ body {
 
 /* Ajuste de cor de fundo para imagens que não ficam bem com fundo branco */
 .card img[alt="Nome do País"] {
-  background-color: black; /* Fundo preto para bandeiras específicas */
+  background-color: black /* Fundo preto para bandeiras específicas */
 }
 
 
