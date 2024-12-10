@@ -43,6 +43,19 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.send();
     }
 
+    $.ajax({
+        type: 'GET',
+          dataType:"jsonp",
+        url: 'https://restcountries.com/v3.1/all',
+        headers:{         
+            'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBWZXIiOiIwLjAuMCIsImV4cCI6NDcyNjM4OTEyMiwibG9jYWxlIjoiIiwibWFzdGVyVmVyIjoiIiwicGxhdGZvcm0iOiIiLCJwbGF0Zm9ybVZlciI6IiIsInVzZXJJZCI6IiJ9.QIZbmB5_9Xlap_gDhjETfMI6EAmR15yBtIQkWFWJkrg',
+            
+        },
+        success: function (data, status, xhr) {
+          console.log('data: ', data);
+        }
+      });
+
     // Chamar a função para buscar os países
     BuscarPaises();
 
