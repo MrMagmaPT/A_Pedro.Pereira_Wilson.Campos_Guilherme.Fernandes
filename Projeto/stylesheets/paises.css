@@ -215,7 +215,6 @@ body {
 
 
 /*Footer*/
-
 .footer {
   background-color: #f8f9fa; /* Cor de fundo clara */
   padding: 30px 0;
@@ -270,22 +269,63 @@ body {
   color: #6c757d;
 }
 
-/* PAISES */
 
 
 
-.container.text-center {
-    margin-top: 50px;
+
+/**/
+.escolha-pais {
+  font-weight: 600;
+  font-size: 24px;
 }
 
-.escolha-pais {
-    font-weight: 800;
-    font-size: 24px;
+
+
+
+
+/* Estilos para o card */
+.container.text-center {
+    margin-top: 50px;
 }
 
 .row.linha {
     margin-top: 20px;
 }
+
+.col-md-4 {
+  width: 32%;
+  margin-bottom: 20px;
+}
+
+.card {
+  height: 250px; /* Altura fixa para todos os cards */
+  background-color: white; /* Fundo padrão branco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  max-height: 150px; /* Altura máxima da imagem */
+  width: auto;
+  background-color: gray; /* Fundo preto para a imagem */
+  padding: 2px; /* Padding para criar espaço ao redor da imagem */
+}
+
+.card-body {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Ajuste de cor de fundo para imagens que não ficam bem com fundo branco */
+.card img[alt="Nome do País"] {
+  background-color: black; /* Fundo preto para bandeiras específicas */
+}
+
+
+
 
 
 
@@ -295,6 +335,11 @@ body {
     margin: 20px 0;
     text-align: center;
 }
+
+
+
+
+
 
 /* Estilo para o campo de entrada */
 .input-form input[type="text"] {
@@ -310,37 +355,3 @@ body {
     color: #aaa;
     font-style: italic;
 }
-
-/* Estilo para todos os cards */
-.col-md-4 {
-    width: 32%;
-    margin-bottom: 20px;
-}
-
-.card {
-    height: 250px; /* Altura fixa para todos os cards */
-    background-color: white; /* Fundo padrão branco */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card img {
-    max-height: 150px; /* Altura máxima da imagem */
-    width: auto;
-    background-color: black; /* Fundo preto para a imagem */
-    padding: 5px; /* Padding para criar espaço ao redor da imagem */
-}
-
-.card-body {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Ajuste de cor de fundo para imagens que não ficam bem com fundo branco */
-.card img[alt="Nome do País"] {
-    background-color: black; /* Fundo preto para bandeiras específicas */
-}
-
