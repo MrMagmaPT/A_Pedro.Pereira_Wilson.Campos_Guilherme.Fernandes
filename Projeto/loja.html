@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <script src="script/color-modes.js"></script>
         <meta charset="utf-8"> <!--Definição de caracteres que podem aparecer -->
         <title>Loja</title> <!-- Titulo da página -->
@@ -9,9 +10,13 @@
         <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/carousel.css">
         <link rel="stylesheet" href="stylesheets/FolhaEstilos_1.css">
+        <link rel="stylesheet" href="stylesheets/carrinho&loja.css">
         <link rel="icon" type="image/x-icon" href="img/icons/loja.ico">
+        <link rel="stylesheet" href="stylesheets/paises.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body>
+        <!-- Navbar -->
         <header data-bs-theme="light">
             <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
                 <div class="container-fluid navbar-heigth">
@@ -22,9 +27,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                        </ul>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
                         <span class="navbar-text">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -48,8 +51,92 @@
                 </div>
             </nav>
         </header>
+        
+        <!-- Corpo da página -->
         <main>
+            <!-- Sub Nav Bar -->
+            <div class="container-md container_sub_nav">
+                <div class="row align-items-end pull_row">
+                    <div class="col">
+                        <p class="text-start">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end">
+                            <!-- Botão de carrinho lateral -->
+                            <button class="btn btn-outline-primary mt-2 ms-2 btn-contactos padd_cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                <i class="bi bi-cart carrinho_tamanho"></i>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <!-- o carrinho instantaneo lateral -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    
+                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                </div>
+            </div>
+            <!-- teste para o menu dos carrinhos e os caralhos -->
+            <div class="container text-center mt-5">
+                <p class="escolha-pais">Países</p>
+                <div class="row mt-4 linha" id="countries">       
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="" class="card-img-top" alt="País">
+                            <div class="card-body">
+                                <h5 class="card-title">Nome do País</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container text-center">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="img/IPL - Logo.png" alt="Politécnico de Leiria" class="footer-logo">
+                </a>
+        
+                <!-- Navigation Links -->
+                <nav class="footer-nav">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="home.html">Home</a></li>
+                        <li class="list-inline-item"><a href="paises.html">Países</a></li>
+                        <li class="list-inline-item"><a href="loja.html">Loja</a></li>
+                        <li class="list-inline-item"><a href="sobre.html">Sobre</a></li>
+                        <li class="list-inline-item"><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </nav>
+        
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="bi bi-twitter"></i></a>
+                </div>
+        
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    <p>© 2024 Direitos de Autor, Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script/bootstrap.bundle.min.js"></script>
+        <script src="script/carrinho.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html> 
