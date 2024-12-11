@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html  lang="pt">
     <head>
-        <script src="script/color-modes.js"></script>
         <meta charset="utf-8"> <!--Definição de caracteres que podem aparecer -->
         <title>Paises</title> <!-- Titulo da página -->
-        <meta name="description" content="Trabalho de Projeto de IPWeb e IAPSI"> <!--descrição da página-->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tamanho do Viewport e como é escalado-->
+
+        <!--descrição da página-->
+        <meta name="description" content="Trabalho de Projeto de IPWeb e IAPSI"> 
+
+        <!-- Tamanho do Viewport e como é rederizado e a sua ecala e como é escalado-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <!-- Stylesheet do bootstrap geral -->
         <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+        <!-- Stylesheet do bootstrap para o carousel (utilizo alguns styles do carousel para a minha nav bar e para evitar desmontar basta fazer uma ligação) -->
         <link rel="stylesheet" href="stylesheets/carousel.css">
+
+        <!-- Stylesheet do nosso projeto "custom made" -->
         <link rel="stylesheet" href="stylesheets/FolhaEstilos_1.css">
+
+        <!-- Icon de um mundinho para aparecer como icone de pagina no broser -->
         <link rel="icon" type="image/x-icon" href="img/icons/paises.ico">
+
+        <!-- Stylesheet especifica da página -->
         <link rel="stylesheet" href="stylesheets/paises.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet do bootstrap para icons utilizando as classes bi bi-{rede} -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
     </head>
     <body>
         <header data-bs-theme="light">
@@ -55,8 +68,8 @@
         <main class="main">
             <!-- SearchBar para os paises  -->
             <div class="input-form">
-                <input type="text" id="pais_nome" name="search" placeholder="Procure por um País..." class="">
-                <button type="submit" id="btn-search" class="btn btn-outline-primary me-2 btn-contactos">Procurar Pais</button>
+                <input type="text" id="pais-nome" name="search" placeholder="Procure por um País..." class="">
+                <button type="submit" id="btn-procurar-pais" class="btn btn-outline-primary me-2 btn-contactos">Procurar Pais</button>
             </div>
 
             <!-- card -->
@@ -75,12 +88,12 @@
         </main>
         <footer class="footer">
             <div class="container text-center">
-                <!-- Logo -->
+                <!-- Logo IPL -->
                 <a href="#">
                     <img src="img/IPL - Logo.png" alt="Politécnico de Leiria" class="footer-logo">
                 </a>
         
-                <!-- Navigation Links -->
+                <!-- Footer Nav Links (como a nav bar mas no footer) -->
                 <nav class="footer-nav">
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="home.html">Home</a></li>
@@ -91,7 +104,7 @@
                     </ul>
                 </nav>
         
-                <!-- Social Media Icons -->
+                <!-- Icons de redes sociais utiliza as classes bi e bi-{rede} do bootstrap para icons -->
                 <div class="social-icons">
                     <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                     <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -106,12 +119,8 @@
             </div>
         </footer>
 
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="script/bootstrap.bundle.min.js"></script>
         <script src="script/ProcuraPaises.js"></script>
-        
-        
     </body>
 </html> 
