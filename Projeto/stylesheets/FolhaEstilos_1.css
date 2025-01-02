@@ -219,7 +219,7 @@ body {
 }
 
 .col-md-4{
-  border: #000 solid 3px;
+  border: #292929 solid 3px; /*importante*/
   /* margin: 0px 5px; */
   margin-bottom: 20px;
   width: 32%;
