@@ -324,8 +324,54 @@ body {
   background-color: black /* Fundo preto para bandeiras específicas */
 }
 
+/*Media queries para os tamanhos do texto e imagens correspondente ao tamanho da tela (testei com todos os telefones la na lista e este fica sempre certo (escepto alguns apises que teem um nome um pouco maior que o comum mas n faz mal, ninguem mandou fazer um pais com 4 capitais)*/
+@media only screen and (max-width: 1200px) {
+  .card-img-top {
+    max-height: 50%; /* Altura máxima da imagem */
+  }
+  h4 {
+    font-size: 60%;
+  }
+  h6 {
+    font-size: 60%;
+  }
+}
 
+@media only screen and (max-width: 870px) {
+  .card-img-top {
+    max-height: 40%; /* Altura máxima da imagem */
+  }
+  h4 {
+    font-size: 50%;
+  }
+  h6 {
+    font-size: 45%;
+  }
+}
 
+@media only screen and (max-width: 700px) {
+  .card-img-top {
+    max-height: 30%; /* Altura máxima da imagem */
+  }
+  h4 {
+    font-size: 50%;
+  }
+  h6 {
+    font-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card-img-top {
+    max-height: 20%; /* Altura máxima da imagem */
+  }
+  h4 {
+    font-size: 50%;
+  }
+  h6 {
+    font-size: 45%;
+  }
+}
 
 
 
@@ -355,3 +401,4 @@ body {
     color: #aaa;
     font-style: italic;
 }
+
