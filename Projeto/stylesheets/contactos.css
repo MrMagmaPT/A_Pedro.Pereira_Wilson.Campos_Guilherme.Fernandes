@@ -1,0 +1,201 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/*Centraliza o Form*/
+.contact-form {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+/*Alinhar o botão Enviar*/
+.button-container {
+    text-align: center;
+    margin: 40px 0;
+}
+.linha { 
+    margin: 20px 0;
+    border: 1px solid #ddd;;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.form-group {
+    color: #000;
+    margin-bottom: 15px;
+}
+.container {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.spacing{
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+.contact-info {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.map-location {
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    width: 440px;
+    height: 500px;
+}
+.mapa-e-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.mapa{
+    margin-top: 40px;
+}
+form {
+    width: 100%;
+    min-height: 500px;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+.navbar-heigth {
+    padding: 0px 70px;
+}
+.nav-item {
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+  
+.btn-contactos {
+    font-size: 20px;
+    border-radius: 0%;
+    border-width: 2px;
+}
+
+/*Footer copiado da homepage*/
+.footer {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    padding: 30px 0;
+    border-top: 1px solid #ddd; /* Linha superior */
+  }
+  
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-nav ul {
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+  }
+  
+  .footer-nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .footer-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #007bff; /* Cor de hover */
+  }
+  
+  .social-icons {
+    margin: 20px 0;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #0056b3; /* Cor de hover */
+  }
+  
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d;
+  }
+
+/* Media Queries peguei da ficha da CSS*/
+@media (max-width: 768px) {
+  .map-location iframe {
+      width: 100%; 
+      height: 300px; 
+  }
+  .contact-form {
+      max-width: 100%;
+      padding: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .map-location iframe {
+      width: 100%; 
+      height: 200px;
+  }
+  .contact-form {
+      max-width: 100%; 
+      padding: 5px;
+  }
+}
