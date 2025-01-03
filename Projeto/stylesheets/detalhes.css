@@ -277,8 +277,12 @@ color: #6c757d;
 .card-img-top {
   max-height: 160px; /* Altura máxima da imagem */
   width: auto;
-  background-color: gray; /* Fundo preto para a imagem */
+  background-color: white; /* Fundo preto para a imagem */
   margin: 2px 2px 20px 2px /* Padding para criar espaço ao redor da imagem */
+}
+.bandeira {
+  border-radius: 2px;
+  border: 4px solid black;
 }
 
 h5 {

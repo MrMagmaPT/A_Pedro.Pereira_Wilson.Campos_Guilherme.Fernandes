@@ -1,20 +1,30 @@
 $(document).ready(function(){
     //document.getElementById("btn-procurar-pais").click();
+    var botao = document.getElementById("button-fav");
     var paisRecebido = JSON.parse(localStorage.getItem("detalhesPaisSelecionado"));
     var output = 0
     if (paisRecebido == undefined || paisRecebido == null) {
         window.location = "./paises.html";
     } else {
-        nomePais = paisRecebido[0].nome
+        paisRecebido = paisRecebido[0]
+        nomePais = paisRecebido.nome
         getDetalhesPais(nomePais)
+
+        var objetoPais = {
+            "nome":paisRecebido.nome,
+            "capital":paisRecebido.capital === undefined ? "Sem Capital" : paisRecebido.capital[0],
+            "populacao":paisRecebido.populacao,
+            "bandeira":paisRecebido.bandeira
+        }
+        var stringObjetoPais = JSON.stringify(objetoPais);
+        botao.setAttribute("onclick", "addFavoritos("+ stringObjetoPais +")");
+        atualizarEstadoBotoes()
     }
     
 })
 
-//var input = document.getElementById("pais-nome");
 
 function getDetalhesPais(nomePais) {
-    
     $.ajax({
         method:'GET',
         url:'https://restcountries.com/v3.1/name/' + nomePais
@@ -53,15 +63,14 @@ function getDetalhesPais(nomePais) {
             } else {
                 document.getElementById('bandeira').src = element.flags.png; //OK   
             }
-
+            
             //enviar cenas para o botão yeeeeyyaaaa
+
         });
         
     });
 }
-
-
-
+/*
 $('#btn-procurar-pais').on('click', function(){
     var valorPesquisa = $('#pais-nome').val();
     var valorPesquisaSufix= "translation/"
@@ -97,7 +106,7 @@ $('#btn-procurar-pais').on('click', function(){
         atualizarEstadoBotoes();    
     });
     
-});  
+});  */
 
 function addFavoritos(pais) {
     var arrayPaisesFavoritos;   
@@ -163,37 +172,21 @@ function atualizarEstadoBotoes() {
     for (var i = 0; i < botoes.length; i++) { // Itera sobre todos os botões encontrados
         var botao_coracao = botoes[i];
         var card = botao_coracao.parentNode.querySelector("#card"); // Procura o elemento pai mais próximo com a classe "card"
-        if (card) { // Verifica se o card existe
-            Nome = card.querySelector("#nome-card-pais").innerText.replace("Nome: ", ""); // Obtém o nome do país
-            Populacao = card.querySelector("#populacao-card-pais").innerText.replace("População: ", ""); // Obtém a população do país
-            Capital = card.querySelector("#capital-card-pais").innerText.replace("Capital: ", ""); // Obtém a capital do país
-            Bandeira = card.querySelector("img").src; // Obtém o src da imagem (bandeira)
-            
-            var objetoPais = {
-                "nome":card.querySelector("#nome-card-pais").innerText.replace("Nome: ", ""),
-                "capital":card.querySelector("#capital-card-pais").innerText.replace("Capital: ", ""),
-                "populacao":card.querySelector("#populacao-card-pais").innerText.replace("População: ", ""),
-                "bandeira": card.querySelector("img").src
+        if (Nome) {
+            // Verifica se o país já está nos favoritos
+            var existeNosFavoritos = arrayPaisesFavoritos.findIndex(s => s.nome === Nome);
+            if (existeNosFavoritos !== -1) {
+                // Se já existe nos favoritos, altera o botão para 'remover' favorito
+                botao_coracao.setAttribute("onclick", "removeFavoritos(" + JSON.stringify(objetoPais) + ")");
+                botao_coracao.setAttribute("class", "btn-favoritos text-start btn btn-outline-danger mt-3 mb-1");
+                
+            } else {
+                // Se não existe, altera o botão para 'adicionar' aos favoritos
+                botao_coracao.setAttribute("onclick", "addFavoritos(" + JSON.stringify(objetoPais) + ")");
+                botao_coracao.setAttribute("class", "btn-favoritos text-start btn btn-danger mt-3 mb-1");
+                
             }
-            
-            console.log(objetoPais); // Exibe o nome para verificação
-            
-            if (Nome) {
-                // Verifica se o país já está nos favoritos
-                var existeNosFavoritos = arrayPaisesFavoritos.findIndex(s => s.nome === Nome);
-                if (existeNosFavoritos !== -1) {
-                    // Se já existe nos favoritos, altera o botão para 'remover' favorito
-                    botao_coracao.setAttribute("onclick", "removeFavoritos(" + JSON.stringify(objetoPais) + ")");
-                    botao_coracao.setAttribute("class", "btn-favoritos text-start btn btn-outline-danger mt-3 mb-1");
-                    
-                } else {
-                    // Se não existe, altera o botão para 'adicionar' aos favoritos
-                    botao_coracao.setAttribute("onclick", "addFavoritos(" + JSON.stringify(objetoPais) + ")");
-                    botao_coracao.setAttribute("class", "btn-favoritos text-start btn btn-danger mt-3 mb-1");
-                    
-                }
-                console.log("Ta tudo atualizadissimissimo"); // TEMP
-            }
+            console.log("Ta tudo atualizadissimissimo"); // TEMP
         }
     }
 }
