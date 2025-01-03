@@ -19,7 +19,7 @@ function getDetalhesPais(nomePais) {
         method:'GET',
         url:'https://restcountries.com/v3.1/name/' + nomePais
     }).done(function(dados){
-        dados.forEach(element =>{
+            dados.forEach(element =>{
             //titulo
             document.getElementById('nome_titulo').innerHTML = element.name.common; //OK
 
@@ -53,16 +53,6 @@ function getDetalhesPais(nomePais) {
             } else {
                 document.getElementById('bandeira').src = element.flags.png; //OK   
             }
-
-            
-         
-
-            /*
-            var stringObjetoPais = JSON.stringify(objetoPais);
-            $('.btn-favoritos', cloneCard).attr("onclick", "addFavoritos("+stringObjetoPais+")");
-            $('.btn-detalhes', cloneCard).attr("onclick", "abrirDetalhesPais("+stringObjetoPais+")");
-            $('#countries').append(cloneCard);*/
-
 
             //enviar cenas para o botão yeeeeyyaaaa
         });
@@ -133,6 +123,8 @@ function addFavoritos(pais) {
     botao.setAttribute("class", "btn-favoritos text-start btn btn-outline-danger mt-3 mb-1");
     //botao.querySelector("big").innerText = "❤ RemFav";
 }
+
+
 //L[] = 150 / 3 - ROUND(terc) -> RND1 = RND(0,terc) RND2 = RND(trc+1,terc*2) RND3 = RND(terc*2+1, terc*3) para fazer as 3 principais
 function removeFavoritos(pais) {
     var arrayPaisesFavoritos;    
@@ -165,7 +157,7 @@ function removeFavoritos(pais) {
 function atualizarEstadoBotoes() {
     var arrayPaisesFavoritos = JSON.parse(localStorage.getItem("pais")) || []; // Carrega os favoritos ou cria um array vazio
     var botoes = document.querySelectorAll("#button-fav"); // Seleciona todos os botões com o id "button-fav"
-    var Nome, Populacao, Capital, Bandeira;
+    var Nome;
     var objetoPais;
     console.log(botoes.length);//TEMP
     for (var i = 0; i < botoes.length; i++) { // Itera sobre todos os botões encontrados
@@ -206,21 +198,3 @@ function atualizarEstadoBotoes() {
     }
 }
 
-/*
-function verificarTamanhoEcran() {
-    var tabela = document.getElementById('div-tabela-detalhes');
-    var imagens = document.getElementById('div-imagens-pais');
-    if (window.innerWidth <= 900) {
-        tabela.class = "col-sm-12 table-responsive";
-        imagens.class = "col-sm-4";
-        console.log("MUDA! para baixo");
-    } else {
-        tabela.class = "col-sm-8 table-responsive";
-        imagens.class = "col-sm-4";
-        console.log("MUDA! para MAIOR");
-    }
-}
-
-// Corre a função ao carregar a página e ao redimensionar a janela
-window.addEventListener('load', verificarTamanhoEcran);
-window.addEventListener('resize', verificarTamanhoEcran);*/

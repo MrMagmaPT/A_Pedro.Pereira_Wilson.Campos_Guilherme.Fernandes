@@ -104,7 +104,7 @@ function removeFavoritos(pais) {
 function atualizarEstadoBotoes() {
     var arrayPaisesFavoritos = JSON.parse(localStorage.getItem("pais")) || []; // Carrega os favoritos ou cria um array vazio
     var botoes = document.querySelectorAll("#button-fav"); // Seleciona todos os botões com o id "button-fav"
-    var Nome, Populacao, Capital, Bandeira;
+    var Nome;
     var objetoPais;
     //console.log(botoes.length); //TEMP
     for (var i = 0; i < botoes.length; i++) { // Itera sobre todos os botões encontrados
@@ -155,19 +155,6 @@ function abrirDetalhesPais(pais) {
 
     var detalhesStorage = JSON.stringify(arrayDetalhesPaises)
     localStorage.setItem("detalhesPaisSelecionado", detalhesStorage);
-    /*if (localStorage.getItem("detalhesPaisSelecionado") === null) {
-        
-    } else {    
-        arrayDetalhesPaises = JSON.parse(localStorage.getItem("detalhesPaisSelecionado"));
-        for (var i = 0; i <= arrayDetalhesPaises.length ;i++) {
-            if (arrayDetalhesPaises.findIndex( s => s.nome == pais.nome) == -1) {
-                arrayDetalhesPaises.push(pais);
-
-                var detalhesStorage = JSON.stringify(arrayDetalhesPaises);
-                localStorage.setItem("detalhesPaisSelecionado", detalhesStorage);
-            } 
-        }
-    }*/
     window.location = "./detalhes.html";
 }
 
