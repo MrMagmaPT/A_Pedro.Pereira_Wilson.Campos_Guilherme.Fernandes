@@ -17,7 +17,7 @@
             <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
                 <div class="container-fluid navbar-heigth">
                     <a class="navbar-brand" href="#">
-                        <img src="img/IPL - Logo.png" alt="logo IPL" height="60px">
+                        <img src="img/IPL-Completo.png.png" alt="logo IPL" height="60px">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -49,45 +49,46 @@
             </nav>
         </header>
         <main>
-
-            <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-                <!-- Indicadores do Carousel -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <br>
+            <!-- Carousel -->
+            <div id="myCarousel" class="carousel slide my-8 pt-0" data-bs-ride="carousel">
+                <div class="carousel-inner mt-1">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active mt-3" style="background-color: #f8f9fa;">
+                            <br>
+                            <div class="container d-flex align-items-center mt-6">
+                            <div class="carousel-content text-start">
+                                <h1>Descobre o Japão</h1>
+                                <p>Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.</p>
+                                <p>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p>
+                                <button class="btn btn-outline-primary explore-button">Explorar</button>
+                            </div>
+                            <div class="carousel-image">
+                                <img src="img/Japanese Temple.png" alt="Japanese Temple"/>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item mt-3" style="background-color: #000000;">
+                            <br>
+                            <div class="container d-flex align-items-center mt-6">
+                                <div class="carousel-content text-start text-light">
+                                <h1>Descobre a Austrália</h1>
+                                <p>Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de Sydney e o vasto Outback.</p>
+                                <p>A Austrália oferece uma vida selvagem única, costas ensolaradas e paisagens diversificadas.</p>
+                                <button class="btn btn-outline-primary explore-button-Escuro">Explorar</button>
+                            </div>
+                            <div class="carousel-image">
+                                <img src="img/Australia Section.png" alt="Sydney Building" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Indicadores do Carousel -->
+                    <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
                 </div>
-            
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-color: #f8f9fa;">
-                      <div class="container d-flex align-items-center">
-                        <div class="carousel-content text-start">
-                          <h1>Descobre o Japão</h1>
-                          <p>Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.</p>
-                          <p>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p>
-                          <button class="explore-button">Explorar</button>
-                        </div>
-                        <div class="carousel-image">
-                          <img src="img/Japanese Temple.png" alt="Templo Japonês" />
-                        </div>
-                      </div>
-                    </div>
-                
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-color: #000;">
-                      <div class="container d-flex align-items-center">
-                        <div class="carousel-content text-start text-light">
-                          <h1>Descobre a Austrália</h1>
-                          <p>Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de Sydney e o vasto Outback.</p>
-                          <p>A Austrália oferece uma vida selvagem única, costas ensolaradas e paisagens diversificadas.</p>
-                          <button class="explore-button">Explorar</button>
-                        </div>
-                        <div class="carousel-image">
-                          <img src="img/Australia Section.png" alt="Sydney Building" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
             
                 <!-- Controles do Carousel -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -100,43 +101,21 @@
                 </button>
             </div>
 
-
-        <div class="container text-center mt-5">
-            <p class="escolha-pais">
-                Escolha o País
-            </p>
+        <<div class="container text-center mt-5" id="countriesHomePage">
+            <p class="escolha-pais">Países</p>
             <p>Escolha um destino para explorar a sua singularidade, cultura e atrações. Descubra os lugares mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.</p>
-            <div class="row mt-4 linha">
-                <!-- Estados Unidos -->
+            <div class="row mt-4 linha" id="countries">       
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="img/Us flag.png" class="card-img-top" alt="Estados Unidos">
+                        <img src="" class="card-img-top" alt="País">
                         <div class="card-body">
-                            <h5 class="card-title">Estados Unidos da América</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Canadá -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/Canada flag.png" class="card-img-top" alt="Canadá">
-                        <div class="card-body">
-                            <h5 class="card-title">Canadá</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reino Unido -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="img/Uk flag.png" class="card-img-top" alt="Reino Unido">
-                        <div class="card-body">
-                            <h5 class="card-title">Reino Unido</h5>
+                            <h5 class="card-title">Nome do País</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        
         <section class="hero">
             <img src="img/Background_img_city.png">
             <div  class="hero-content">
@@ -153,7 +132,7 @@
         <div class="cards-container">
             <div class="card">
                 <div class="img-alunos">
-                <img src="img/Pedro.png" alt="Pedro">
+                <img src="img/Pedro.png" alt="Pedro // Porra na Cara">
                 </div>
                 <h2>PEDRO</h2>
                 <p>Estudante</p>
@@ -161,7 +140,7 @@
             </div>
             <div class="card">
                 <div class="img-alunos">
-                    <img src="img/Wilson.png" alt="Pedro">
+                    <img src="img/Wilson.png" alt="Wilson // Japa">
                 </div>
                 <h2>Wilson</h2>
                 <p>Estudante</p>
@@ -169,7 +148,7 @@
             </div>
             <div class="card">
                 <div class="img-alunos">
-                    <img src="img/Guilherme.png" alt="Pedro">
+                    <img src="img/Guilherme.png" alt="Guilherme // Aceleras">
                 </div>
                 <h2>Guilherme</h2>
                 <p>Estudante</p>
@@ -212,6 +191,8 @@
     </footer>
 
         <script src="script/bootstrap.bundle.min.js"></script>
+        <script src="script/ProcuraPaisesHomePage.js"></script>
+        <script src="script/navbar_resize_script.js"></script>
     </body>
 </html> 
 

@@ -5,6 +5,7 @@
     --texto-claro: #fff;
     --texto-escuro: #000;
     --cor-hover: #007BFF;
+    --cor-button:rgba(217, 217, 217, 1);
   }
 
 /*Geral*/
@@ -32,7 +33,7 @@ body {
   align-items: center;
   background-color: white;
   color: black;
-  padding: 2rem;
+  padding-top: 2rem;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -70,6 +71,43 @@ body {
   color: var(--texto-escuro);
 }
 
+.explore-button-Escuro {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--texto-claro);
+  background: transparent;
+  color: var(--texto-claro);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.explore-button-Escuro:hover {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-claro);
+}
+
+.carousel-indicators [data-bs-target]{
+  position: flex;
+  align-items: center;
+  transform: translateY(-150%);
+  opacity: 1;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 74px;
+  height: 4px;
+  }
+
+  [data-bs-theme=dark] .carousel-dark .carousel-indicators [data-bs-target], [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], .carousel-dark .carousel-indicators [data-bs-target], .carousel .carousel-indicators [data-bs-target] {
+    background-color: rgba(217, 217, 217, 1);
+  }
+
+  [data-bs-theme=dark] .carousel-dark [data-bs-target].active, [data-bs-theme=dark] .carousel [data-bs-target].active, .carousel-dark [data-bs-target].active, .carousel [data-bs-target].active {
+    background-color: blue;
+  }
+
+
 /* Imagens do carrossel */
 .carousel-image {
   max-width: 45%;
@@ -78,7 +116,7 @@ body {
 .carousel-image img {
   width: 100%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 
@@ -181,7 +219,7 @@ body {
 }
 
 .col-md-4{
-  border: #000 solid 3px;
+  border: #292929 solid 3px; /*importante*/
   /* margin: 0px 5px; */
   margin-bottom: 20px;
   width: 32%;
