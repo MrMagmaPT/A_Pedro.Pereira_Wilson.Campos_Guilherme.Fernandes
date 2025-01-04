@@ -1,0 +1,388 @@
+/* Importação da fonte*/
+@font-face{
+  font-family: Outfit;
+  src: url("../font/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+  --cor-destaque: #1559B7; 
+  --fundo-claro: #ededed;
+  --fundo-branco: #fff;
+  --fundo-escuro: #000;
+  --texto-claro: #fff;
+  --texto-escuro: #000;
+  --cor-hover: #007BFF;
+  --cor-button:rgba(217, 217, 217, 1);
+  --cor-cinzento: #4e4e4e;
+  --cor-borda: #ddd;
+}
+
+/*Geral*/
+
+
+body {
+  margin: 0;
+    font-family: Outfit, sans-serif;
+    background-color: var( --fundo-branco);
+    color: var(--texto-escuro);
+}
+
+.carousel-conteiner {
+  position: relative;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  transform: translateX(-230px);
+}
+
+/*meche o controo do carrocel previo 70px para traz para ficar mais bunito*/
+.carousel-control-prev {
+  width: 5%;
+  transform: translateX(-5%);
+}
+.carousel-control-next{
+  width: 5%;
+  transform: translateX(5%);
+}
+
+.texto-cor-preto {
+  color: black;
+}
+
+/*icons do footer*/
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+/*NavBar*/
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.navbar-heigth {
+  padding: 0px 70px;
+}
+.nav-item {
+  padding: 0px 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+
+/*Botão contactos*/
+.btn-contactos {
+  font-size: 20px;
+  border-radius: 0%;
+  border-width: 2px;
+}
+
+/*Escolha o pais*/
+#countriesHomePage h1{
+  font-size: 56px;
+  text-align: center;
+  font-weight: bolder;
+  padding: 20px;
+} 
+#countriesHomePage p{
+  font-size: 16px;
+  margin: auto;
+  max-width: 750px;
+  margin-bottom: 30px;
+}
+#countries .card-countries:hover {
+  border: var(--cor-hover) solid 3px !important;
+  background-color: #f8f9fa;
+}
+
+
+
+/*overwrite ao bootsrap base*/
+.col-md-4{
+  border: #292929 solid 3px; 
+  margin-bottom: 20px;
+  width: 32%;
+  margin-bottom: 120px;
+  background-color: #f8f9fa;
+}
+.col-md-4:hover{
+  border: #04F solid 3px;
+}
+.col-md-4 .card{
+  padding: 25px;
+  padding-bottom: 0;
+  color: var(--texto-escuro); 
+}
+.col-md-4 .card .card-body{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+
+
+/* Secção explorar o mundo*/
+.hero {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; /* Altura de 100% da viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--texto-claro);
+  text-align: center;
+  margin-top: auto;
+}
+.hero img{
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 480px;
+}
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  padding: 20px;
+  background-color: #000000BF;/*Cor de baixo*/
+}
+.hero h1 {
+  margin-top: 100px;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 16px;
+  margin: auto;
+  max-width: 905px;
+  margin-bottom: 30px;
+}
+.explore-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: var(--texto-escuro);
+  background: var(--fundo-claro);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+.hero .explore-button:hover {
+  background: var(--cor-cinzento);
+  color: var(--texto-claro);
+}
+
+
+/*Footer*/
+.footer {
+  background-color: var(--fundo-claro); /* Cor de fundo clara */
+  padding: 30px 0;
+  border-top: 1px solid var(--fundo-claro); /* Linha superior */
+}
+.footer-logo {
+  height: 60px;
+  margin-bottom: 20px;
+}
+.footer-nav ul {
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+.footer-nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+.footer-nav ul li a:hover {
+  color: var(--cor-hover); /* Cor de hover */
+}
+.social-icons {
+  margin: 20px 0;
+}
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: var(--cor-hover); /* Cor de hover */
+}
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--cor-cinzento); /* Cor cinzenta */
+}
+
+
+
+/*Estilos para o card do pais*/
+.card {
+  max-height: 250px; /* Altura fixa para todos os cards */
+  background-color: var(--fundo-claro); /* Fundo padrão branco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top {
+  max-height: 150px; /* Altura máxima da imagem */
+  width: auto;
+  padding: 2px; /* Padding para criar espaço ao redor da imagem */
+  border: 2px var(--cor-borda) solid;
+  border-radius: 4px;
+}
+.card-body {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/*Sobre nos*/
+.sobre-nos {
+  font-size: 56px;
+  text-align: center;
+  padding: 20px;
+}
+.sobre-nos .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap:wrap
+}
+.sobre-nos .card_sobre {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.sobre-nos .card_sobre img{
+  width: 90%;
+  height: 90%;
+  border-radius: 0;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-top: 15px
+}
+.sobre-nos .card_sobre h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: black;
+  font-weight: bolder;
+}
+.sobre-nos .card_sobre p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+.sobre-nos .img-alunos{
+  overflow-y: hidden;
+  display:flex;
+  height: 360px;
+}
+.sobre-nos .info-button {
+  display: inline-block;
+  margin: auto;
+  text-decoration: none;
+  color: var(--cor-hover);
+  font-weight: 300;
+  font-size: 1rem;
+  border: 1px solid var(--cor-hover);
+  padding: 5px 5px;
+  border-radius: 4px !important;
+  transition: all 0.3s ease;
+}
+.sobre-nos .info-button:hover {
+  background: var(--fundo-claro);
+  color: var(--cor-hover);
+}
+
+
+.img-carousel {
+  max-width: 500px;
+  max-height: auto;
+}
+
+.carousel-caption {
+  width: 1300px;
+}
+
+.carousel-caption p{
+  font-size: 16px;
+}
+.carousel-caption h1{
+  font-size: 76px;
+  font-weight: bold;;
+}
+
+.setinhas-carrocel {
+  color: var(--cor-destaque);
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: var(--cor-destaque);
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+  .card-countries {
+    height: 270px;
+    width: 250px;
+    font-size: 90%;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .card-countries {
+    height: 240px;
+    width: 210px;
+    font-size: 80%;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 780px) {
+  .card-countries {
+    height: 200px;
+    width: 180px;
+    font-size: 70%;
+  }
+  .card-img-top {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .card-title-pais {
+    font-size: 20px;
+  }
+}

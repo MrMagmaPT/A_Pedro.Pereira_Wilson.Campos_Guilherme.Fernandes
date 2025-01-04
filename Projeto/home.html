@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"> <!--Definição de caracteres que podem aparecer -->
-        <title>Home</title> <!-- Titulo da página -->
-        <meta name="description" content="Trabalho de Projeto de IPWeb e IAPSI"> <!--descrição da página-->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tamanho do Viewport e como é escalado-->
-        <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-        <link rel="stylesheet" href="stylesheets/carousel.css">
-        <link rel="stylesheet" href="stylesheets/FolhaEstilos_1.css">
-        <link rel="icon" type="image/x-icon" href="img/icons/home.ico">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    </head>
+    <html>
+        <head>
+            <meta charset="utf-8"> <!--Definição de caracteres que podem aparecer -->
+            <title>Home</title> <!-- Titulo da página -->
+            <!--descrição da página-->
+            <meta name="description" content="Trabalho de Projeto de IPWeb e IAPSI"> 
+
+            <!-- Tamanho do Viewport e como é rederizado e a sua ecala e como é escalado-->
+            <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+            <!-- Stylesheet do bootstrap geral -->
+            <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+            <!-- Stylesheet do bootstrap para o carousel (utilizo alguns styles do carousel para a minha nav bar e para evitar desmontar basta fazer uma ligação) -->
+            <link rel="stylesheet" href="stylesheets/carousel.css">
+
+            <!-- Icon de um mundinho para aparecer como icone de pagina no broser -->
+            <link rel="icon" type="image/x-icon" href="img/icons/home.ico">
+
+            <!-- Stylesheet especifica da página -->
+            <link rel="stylesheet" href="stylesheets/home.css">
+
+            <!-- Stylesheet do bootstrap para icons utilizando as classes bi bi-{rede} -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+        </head>
     <body>
         <header data-bs-theme="light">
             <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
                 <div class="container-fluid navbar-heigth">
                     <a class="navbar-brand" href="#">
-                        <img src="img/IPL-Completo.png" alt="logo IPL" height="60px">
+                        <img src="img/IPL-Completo.png" id="Logo" alt="logo IPL" height="60px">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -50,112 +63,133 @@
         <main>
             <br>
             <!-- Carousel -->
-            <div id="myCarousel" class="carousel slide my-8 pt-0" data-bs-ride="carousel">
-                <div class="carousel-inner mt-1">
-                        <!-- Slide 1 -->
-                        <div class="carousel-item active mt-3" style="background-color: #f8f9fa;">
-                            <br>
-                            <div class="container d-flex align-items-center mt-6">
-                            <div class="carousel-content text-start">
-                                <h1>Descobre o Japão</h1>
-                                <p>Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.</p>
-                                <p>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p>
-                                <button class="btn btn-outline-primary explore-button">Explorar</button>
-                            </div>
-                            <div class="carousel-image">
-                                <img src="img/Japanese Temple.png" alt="Japanese Temple"/>
-                            </div>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="carousel-item mt-3" style="background-color: #000000;">
-                            <br>
-                            <div class="container d-flex align-items-center mt-6">
-                                <div class="carousel-content text-start text-light">
-                                <h1>Descobre a Austrália</h1>
-                                <p>Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de Sydney e o vasto Outback.</p>
-                                <p>A Austrália oferece uma vida selvagem única, costas ensolaradas e paisagens diversificadas.</p>
-                                <button class="btn btn-outline-primary explore-button-Escuro">Explorar</button>
-                            </div>
-                            <div class="carousel-image">
-                                <img src="img/Australia Section.png" alt="Sydney Building" />
+            <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                <!-- Indicator do Carosel -->~
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Primeiro Slide -->
+                    <div class="carousel-item active">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--fundo-claro)"/></svg>
+                        <div class="container carousel-conteiner">
+                            <div class="carousel-caption text-start">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <div class="col-12">
+                                            <h1 class="mt-5 texto-cor-preto">Descobre o Japão</h1><br>
+                                            <p class="opacity-75 texto-cor-preto">Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às antigas ruínas de Roma,cada imagem revela um lugar à espera de ser explorado. <br><br>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p><br>
+                                        </div>
+                                        <div class="col-12 d-flex align-self-end">
+                                            <p><a class="btn btn-lg btn-outline-primary " href="paises.html">Explorar</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <img src="img/Japanese Temple.png" alt="templo jap" class="img-carousel">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Indicadores do Carousel -->
-                    <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active   " aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <!-- Segundo Slide -->
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--fundo-escuro)"/></svg>
+                        <div class="container carousel-conteiner">
+                            <div class="carousel-caption text-start ">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h1 class="mt-5">Descobre a Austrália</h1><br>
+                                        <p class="opacity-75">Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de Sydney e o vasto Outback.<br><br>A Austrália oferece uma vida selvagem única, costas ensolaradas e paisagens diversificadas.</p><br>
+                                        <p><a class="btn btn-lg btn-outline-primary" href="paises.html">Explorar</a></p>
+                                    </div>
+                                    <div class="col-5">
+                                        <img src="img/Australia Section.png" alt="Imagem opera de sidney" class="img-carousel">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            
-                <!-- Controles do Carousel -->
+                <!-- Controlos do carosel -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <i class="bi bi-chevron-left setinhas-carrocel"></i>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <i class="bi bi-chevron-right setinhas-carrocel"></i>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <!-- 
+            <svg viewBox="50 50 210 220">
+                <path d="M -50,0 L -60,-10 L -20,-50 L -60,-90 L -50,-100 L 0,-50 Z" class="arrow" si transform="translate(85,100) rotate(180)"></path>
+            </svg>
 
-        <<div class="container text-center mt-5" id="countriesHomePage">
-            <p class="escolha-pais">Países</p>
-            <p>Escolha um destino para explorar a sua singularidade, cultura e atrações. Descubra os lugares mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.</p>
-            <div class="row mt-4 linha" id="countries">       
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="" class="card-img-top" alt="País">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do País</h5>
+            <svg viewBox="-50 -50 210 220">
+                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" class="arrow" transform="translate(85,100) rotate(180)"></path>
+            </svg>      
+            -->
+            <div class="container text-center my-5 " id="countriesHomePage">
+                <h1>Escolha o País</h1>
+                <p>Escolha um destino para explorar a sua singularidade, cultura e atrações. Descubra os lugares mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.</p>
+                <!-- card -->
+                <div class="container text-center mt-5 " id="countries">
+                    <!-- card base-->
+                    <div class="g-light col-md-4 btn card-countries px-0 py-0 my-1 mx-1 border-3 border-secondary" id="button_detalhes()">
+                        <div class="ir-detalhes mb-3" onclick="abrirDetalhesPais()"> <!-- Div especial da zona -->
+                            <div class="card border-0 bg-light" id="card">
+                                <img src="img/placeholder_flag.png" class="bg-light card-img-top mt-2 bg-white" alt="País" >
+                                <div class="card-body py-2">
+                                    <h4 class="text-start card-title-pais" id="nome-card-pais">Nome do País</h4>
+                                </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <section class="hero">
-            <img src="img/Background_img_city.png">
-            <div  class="hero-content">
-                <h1>Explora O Mundo Connosco</h1>
-                <p>Embarca numa aventura para descobrir os destinos mais cativantes do mundo, desde paisagens urbanas vibrantes até serenas maravilhas naturais. Explora o encanto único de cada país, rico em cultura, história e experiências inesquecíveis. Deixa-nos ser o teu guia até lugares que inspiram e despertam o espírito de exploração. Em cada viagem, descobre novas perspetivas e tesouros escondidos à espera de serem revelados. Começa a tua aventura hoje e cria memórias que durarão para toda a vida.</p>
-                <a href="#" class="explore-button">Explorar</a>
-            </div>
-        </section>
+            
+            <section class="hero mt-3">
+                <img src="img/Background_img_city.png" class="mt-3">
+                <div class="hero-content mt-3">
+                    <h1><b>Explora O Mundo Connosco</b></h1>
+                    <p>Embarca numa aventura para descobrir os destinos mais cativantes do mundo, desde paisagens urbanas vibrantes até serenas maravilhas naturais. Explora o encanto único de cada país, rico em cultura, história e experiências inesquecíveis. Deixa-nos ser o teu guia até lugares que inspiram e despertam o espírito de exploração. Em cada viagem, descobre novas perspetivas e tesouros escondidos à espera de serem revelados. Começa a tua aventura hoje e cria memórias que durarão para toda a vida.</p>
+                    <a href="paises.html" class="explore-button">Explorar</a>
+                </div>
+            </section>
 
-    <section class="sobre-nos">
-        <p class="sobre-nos">
-            Sobre Nós
-        </p>
-        <div class="cards-container">
-            <div class="card">
-                <div class="img-alunos">
-                <img src="img/Pedro.png" alt="Pedro // Porra na Cara">
+            <section class="sobre-nos">
+                <p class="sobre-nos">
+                    <b>Sobre Nós</b>
+                </p>
+                <div class="cards-container">
+                    <div class="card_sobre">
+                        <div class="img-alunos">
+                        <img src="img/Pedro.png" alt="Aluno">
+                        </div>
+                        <h2>Pedro Pereira</h2>
+                        <p>Estudante</p>
+                        <a href="contactos.html" class="info-button">Mais Informações &gt;</a>
+                    </div>
+                    <div class="card_sobre">
+                        <div class="img-alunos">
+                            <img src="img/Wilson.png" alt="Aluno">
+                        </div>
+                        <h2>Wilson Tsuyoshi</h2>
+                        <p>Estudante</p>
+                        <a href="contactos.html" class="info-button">Mais Informações &gt;</a>
+                    </div>
+                    <div class="card_sobre">
+                        <div class="img-alunos">
+                            <img src="img/Guilherme.png" alt="Aluno">
+                        </div>
+                        <h2>Guilherme Fernandes</h2>
+                        <p>Estudante</p>
+                        <a href="contactos.html" class="info-button">Mais Informações &gt;</a>
+                    </div>
                 </div>
-                <h2>PEDRO</h2>
-                <p>Estudante</p>
-                <a href="#" class="info-button">Mais Informações &gt;</a>
-            </div>
-            <div class="card">
-                <div class="img-alunos">
-                    <img src="img/Wilson.png" alt="Wilson // Japa">
-                </div>
-                <h2>Wilson</h2>
-                <p>Estudante</p>
-                <a href="#" class="info-button">Mais Informações &gt;</a>
-            </div>
-            <div class="card">
-                <div class="img-alunos">
-                    <img src="img/Guilherme.png" alt="Guilherme // Aceleras">
-                </div>
-                <h2>Guilherme</h2>
-                <p>Estudante</p>
-                <a href="#" class="info-button">Mais Informações &gt;</a>
-            </div>
-        </div>
-    </section>
-    
+            </section>
+    </main>
     <footer class="footer">
         <div class="container text-center">
             <!-- Logo -->
@@ -188,10 +222,10 @@
             </div>
         </div>
     </footer>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="script/bootstrap.bundle.min.js"></script>
         <script src="script/ProcuraPaisesHomePage.js"></script>
-        <script src="script/navbar_resize_script.js"></script>
+        <script src="script/navbar_resize_script.js"></script>  
     </body>
 </html> 
 

@@ -1,11 +1,20 @@
+/* Importação da fonte*/
+@font-face{
+  font-family: Outfit;
+  src: url("../font/Outfit-VariableFont_wght.ttf");
+}
+
 :root {
-  --cor-destaque: #1559B7;
+  --cor-destaque: #1559B7; 
   --fundo-claro: #f8f9fa;
+  --fundo-branco: #fff;
   --fundo-escuro: #000;
   --texto-claro: #fff;
   --texto-escuro: #000;
   --cor-hover: #007BFF;
   --cor-button:rgba(217, 217, 217, 1);
+  --cor-cinzento: #4e4e4e;
+  --cor-borda: #ddd;
 }
 
 /*Geral*/
@@ -13,9 +22,9 @@
 
 body {
 margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
-  color: black;
+  font-family: Outfit, sans-serif;
+  background-color: var(--fundo-branco);
+  color: var(--fundo-escuro);
 }
 
 
@@ -26,12 +35,12 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background-color: white;
-color: black;
+background-color: var(--fundo-branco);
+color: var(--texto-escuro);
 padding-top: 2rem;
 border-radius: 8px;
 overflow: hidden;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+box-shadow: 0 4px 10px var(--texto-escuro);
 }
 
 .carousel-content {
@@ -209,63 +218,51 @@ border-radius: 20px;
 
 
 
-/*Footer*/
+/*Footer copiado da homepage*/
 .footer {
-background-color: #f8f9fa;
-padding: 30px 0;
-border-top: 1px solid #ddd; 
+  background-color: var(--fundo-claro); /* Cor de fundo clara */
+  padding: 30px 0;
+  border-top: 1px solid var(--fundo-claro); /* Linha superior */
 }
-
 .footer-logo {
-height: 60px;
-margin-bottom: 20px;
+  height: 60px;
+  margin-bottom: 20px;
 }
-
 .footer-nav ul {
-padding: 0;
-margin: 20px 0;
-list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
 }
-
 .footer-nav ul li {
-display: inline;
-margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
-
 .footer-nav ul li a {
-text-decoration: none;
-color: #000;
-font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
-
 .footer-nav ul li a:hover {
-color: #007bff; /* Cor de hover */
+  color: var(--cor-hover); /* Cor de hover */
 }
-
 .social-icons {
-margin: 20px 0;
+  margin: 20px 0;
 }
-
 .social-icons a {
-display: inline-block;
-margin: 0 10px;
-font-size: 24px;
-color: #007bff;
-text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #007bff;
+  text-decoration: none;
 }
-
 .social-icons a:hover {
-color: #0056b3; /* Cor de hover */
+  color: var(--cor-hover); /* Cor de hover */
 }
-
 .footer-copyright {
-margin-top: 20px;
-font-size: 14px;
-color: #6c757d;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--cor-cinzento); /* Cor cinzenta */
 }
-
-
-
 
 .container {
   max-width: auto;

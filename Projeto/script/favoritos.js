@@ -2,9 +2,12 @@
 $(document).ready(function(){ // Quando a pagina for aberta ele vai verificar se tem algum pais no localstorage, se tiver ele vai chamar a função getDetalhesPais.
     //document.getElementById("btn-procurar-pais").click();
     var paisRecebido = JSON.parse(localStorage.getItem("pais"));//Pega o pais que foi favoritada na pagina de paises.html.
-
-    if (paisRecebido == undefined || paisRecebido == null) {// Se não tiver pais favoritados ele vai redirecionar para a pagina de paises.html.
-        window.location = "./paises.html";
+    console.log(paisRecebido.length);
+    if (paisRecebido.length == 0 ) {// Se não tiver pais favoritados ele vai redirecionar para a pagina de paises.html.
+        
+        $('#countries').html('');
+        document.getElementById("mensagem").innerHTML = "<br><br>Ainda não foram adicionados paises a lista de favoritos!";
+        document.getElementById("mensagem").classList.add("text-center");
     } else {// Se tiver pais favoritados ele vai chamar a função getDetalhesPais.
         getDetalhesPais(paisRecebido);
     }
@@ -14,7 +17,7 @@ var cloneOriginalCard = $('.card-countries').clone();// Clona o card original pa
 
 /*A função deve receber um objeto com as informações do país e adicionar as informações ao array de favoritos*/
 function getDetalhesPais(pais) {
-    $('#countries').html('');//(??)
+    $('#countries').html('');//(retira o card de placeholder e deixa limpinho o "canvas")
     pais.forEach(element =>{
         var cloneCard = cloneOriginalCard.clone();// Clona o card original para ser usado na função getDetalhesPais.
 

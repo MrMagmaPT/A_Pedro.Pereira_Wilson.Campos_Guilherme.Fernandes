@@ -1,3 +1,10 @@
+/* Importação da fonte*/
+@font-face{
+  font-family: Outfit;
+  src: url("../font/Outfit-VariableFont_wght.ttf");
+}
+
+
 :root {
     --cor-destaque: #1559B7;
     --fundo-claro: #f8f9fa;
@@ -13,7 +20,7 @@
 
 body {
   margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Outfit, sans-serif;
     background-color: white;
     color: black;
 }

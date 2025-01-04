@@ -1,7 +1,25 @@
+/* Importação da fonte*/
+@font-face{
+  font-family: Outfit;
+  src: url("../font/Outfit-VariableFont_wght.ttf");
+}
+:root {
+    --cor-destaque: #1559B7; 
+    --fundo-claro: #f8f9fa;
+    --fundo-branco: #fff;
+    --fundo-escuro: #000;
+    --texto-claro: #fff;
+    --texto-escuro: #000;
+    --cor-hover: #007BFF;
+    --cor-button:rgba(217, 217, 217, 1);
+    --cor-cinzento: #4e4e4e;
+    --cor-borda: #ddd;
+  }
+
 body {
-    background-color: #ffffff;
+    background-color: var(--fundo-branco);
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Outfit, sans-serif;
 }
 /*Centraliza o Form*/
 .contact-form {
@@ -9,29 +27,31 @@ body {
     max-width: 800px;
     text-align: left;
     padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--fundo-claro);
+    box-shadow: 0 4px 8px var(--fundo-escuro);
     border-radius: 10px;
-    border: 1px solid #000000;
+    border: 1px solid var(--cor-borda);
 }
 /*Alinhar o botão Enviar*/
 .button-container {
     text-align: center;
     margin: 40px 0;
 }
+/*Linha que divide o contactos do mapa-e-form*/
 .linha { 
     margin: 20px 0;
-    border: 1px solid #ddd;;
+    border: 1px solid var(--cor-borda);
     width: 100%;
     margin-top: 20px;
     margin-bottom: 40px;
 }
+/*Formúlario de contato*/
 .form-group {
-    color: #000;
+    color: var(--texto-escuro);
     margin-bottom: 15px;
 }
 .container {
-    color: #000;
+    color: var(--texto-escuro);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,28 +60,34 @@ body {
     width: 100%;
     max-width: 1200px;
 }
-
-/*espaçamento para o titulo da página*/
-.spacing{
-    max-width: 1129px;
+/*margin extra pro texto especifico dentro do form*/
+.contact-form-container h3 {
+    margin: 12px 20px 15px 20px;
+}
+/*espaçamento para o titulo Contactos*/
+.text-center h1{
+    max-width: 1230px;
 }
 .contact-info {
   margin: 20px 0;
-  width: 100%;
+  width: 105%;
   display: flex;
   flex-direction: row;
+  align-self: center;
 }
+/*Localização do Escritorio Ficticio*/
 .map-location {
     max-width: 600px;
     padding: 20px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--fundo-branco);
     border-radius: 10px;
-    border: 1px solid #000000;
+    border: 3px solid var(--cor-borda);
     width: 440px;
     height: 500px;
     margin-top: 0;
 }
+/*Faz o display do mapa a esquerda e form a direita*/
 .mapa-e-form {
     display: flex;
     justify-content: space-around;
@@ -74,14 +100,16 @@ body {
 .mapa{
     margin-top: 40px;
 }
+/*Estilo do Formulário*/
 form {
     width: 100%;
     margin-top: 0;
     min-height: 500px;
     padding: 5px;
     border-radius: 10px;
-    border: 1px solid #000000;
+    border: 3px solid var(--cor-borda);
 }
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -89,25 +117,28 @@ label {
     width: 90%;
     margin: auto;
 }
+
 input, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--fundo-claro);
     border-radius: 5px;
     font-size: 16px;
 }
+
 button {
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--cor-destaque);
+    color: var(--fundo-claro);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
+
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--cor-hover);
 }
 
 .navbar-heigth {
@@ -126,59 +157,49 @@ button:hover {
 }
 
 /*Footer copiado da homepage*/
-/*Footer*/
 .footer {
-  background-color: #f8f9fa;
-  padding: 30px 0;
-  border-top: 1px solid #ddd; 
+    background-color: var(--fundo-claro); /* Cor de fundo clara */
+    padding: 30px 0;
+    border-top: 1px solid var(--fundo-claro); /* Linha superior */
   }
-  
   .footer-logo {
-  height: 60px;
-  margin-bottom: 20px;
+    height: 60px;
+    margin-bottom: 20px;
   }
-  
   .footer-nav ul {
-  padding: 0;
-  margin: 20px 0;
-  list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
   }
-  
   .footer-nav ul li {
-  display: inline;
-  margin: 0 15px;
+    display: inline;
+    margin: 0 15px;
   }
-  
   .footer-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
   }
-  
   .footer-nav ul li a:hover {
-  color: #007bff; /* Cor de hover */
+    color: var(--cor-hover); /* Cor de hover */
   }
-  
   .social-icons {
-  margin: 20px 0;
+    margin: 20px 0;
   }
-  
   .social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-  color: #007bff;
-  text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #007bff;
+    text-decoration: none;
   }
-  
   .social-icons a:hover {
-  color: #0056b3; /* Cor de hover */
+    color: var(--cor-hover); /* Cor de hover */
   }
-  
   .footer-copyright {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #6c757d;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--cor-cinzento); /* Cor cinzenta */
   }
 
 /* Media Queries peguei da ficha da CSS*/
@@ -215,10 +236,4 @@ button:hover {
   .contact-info  .email{
     font-size: 50%;
   }
-}
-
-
-/*margin extra pro texto especifico*/
-.margem-texto {
-    margin: 12px 20px 15px 20px;
 }
