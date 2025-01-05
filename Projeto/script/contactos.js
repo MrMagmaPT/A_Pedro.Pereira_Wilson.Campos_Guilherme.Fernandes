@@ -14,4 +14,5 @@ function enviarFormulario(){
     }else{
         alert('Formulário enviado com sucesso');
     }
+    window.location = "contactos.html";
 }

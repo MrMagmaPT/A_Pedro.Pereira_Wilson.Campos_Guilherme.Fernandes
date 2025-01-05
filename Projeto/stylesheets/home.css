@@ -105,6 +105,10 @@ body {
   border: var(--cor-hover) solid 3px !important;
   background-color: #f8f9fa;
 }
+.card-countries{
+  width: 207px;
+  height: 410px;
+}
 
 
 
@@ -349,6 +353,7 @@ body {
 /* Media queries */
 
 @media (max-width: 1200px) {
+  /*Card countries*/
   .card-countries {
     height: 270px;
     width: 250px;
@@ -358,8 +363,25 @@ body {
     width: 100%;
     height: 100%;
   }
+  /*Carrosel*/
+  .carousel-caption{
+    scale: 0.8;
+    margin: auto;
+  }
 }
-@media (max-width: 1000px) {
+
+/*Carrosel*/
+@media (max-width: 1100px){
+  .carousel-caption{
+    scale: 0.7;
+    margin: auto;
+    transform: translateX(-5%);
+  }
+}
+
+
+@media (max-width: 980px) {
+  /*Card countries*/
   .card-countries {
     height: 240px;
     width: 210px;
@@ -369,20 +391,103 @@ body {
     width: 100%;
     height: 100%;
   }
+
+  /*Carousel*/
+  .carousel-caption{
+    scale: 0.5;
+
+  }
+ 
+  /*Sobre nos*/
+  .sobre-nos-section {
+    margin-top: 100px;
+  }
 }
+
+
 @media (max-width: 780px) {
+  /*Card countries*/
   .card-countries {
-    height: 200px;
+    height: 280px;
     width: 180px;
-    font-size: 70%;
+    font-size: 50%;
   }
   .card-img-top {
-    width: 90%;
-    height: 90%;
+    max-width: 30%;
+    max-height: 30%;
+  }
+
+  /*Carrosel*/
+
+  .carousel-caption{
+    scale: 0.4;
+    transform: translateX(-25%);
+  }  
+
+  /*Sobre nos*/
+  .sobre-nos-section {
+    margin-top: 100px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  .hero h1{
+    margin-top: 30px; 
+    font-size: 30px;
+  }
+  .hero p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  /*Card countries*/
   .card-title-pais {
     font-size: 20px;
   }
+
+  /*Carrosel*/
+  /*img do carrosel*/
+  .col-5{
+    transform: translateY(-80px);
+    transform: translateX(-60%);
+  }
+  /*texto do carrosel*/
+  .col-7{
+    transform: translateY(80%);
+    transform: translateX(45%);
+  }
+  /*Fonte do P*/
+   .col-7 p{
+    font-size: 150%;
+  } 
+  .carousel-caption{
+    scale: 0.4;
+    transform: translateX(-65%);
+  }
+  /*Sobre nos*/
+  .sobre-nos-section {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 425px) {
+  .carousel-caption{
+    height: 600px;
+  }
+  /*Sobre nos*/
+  .sobre-nos-section {
+    margin-top: 200px;
+  }
+  .hero h1{
+    margin-top: 10px; 
+    font-size: 25px;
+  }
+  .hero p{
+    font-size: 14px;
+  }
+}
+
+
+.margem-exagero {
+  padding-top: 500px;
 }
