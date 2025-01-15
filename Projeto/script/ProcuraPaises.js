@@ -100,7 +100,7 @@ function removeFavoritos(pais) {
 }
 
 
-//estou aqui
+
 function atualizarEstadoBotoes() {
     var arrayPaisesFavoritos = JSON.parse(localStorage.getItem("pais")) || []; // Carrega os favoritos ou cria um array vazio
     var botoes = document.querySelectorAll("#button-fav"); // Seleciona todos os botões com o id "button-fav"
